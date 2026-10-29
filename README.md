@@ -33,6 +33,8 @@ The frontend does not require MySQL or Python to start.
 - Choose Pilgrimage Focused, Sightseeing & Culture, or Balanced Journey.
 - Browse and search destinations by name, state, or type.
 - View destination markers and popups on an India map.
+- Open a canonical destination story page from tour cards and map markers.
+- Use a shared destination-story schema that marks incomplete research explicitly.
 - Generate a prototype itinerary from duration, region, and travel style.
 - View generated activities in a chronological timeline.
 
@@ -92,6 +94,7 @@ python python/itinerary_helper.py --days 7 --state "Uttar Pradesh"
 | `/tours` | Searchable destination catalogue |
 | `/map` | Leaflet map with destination markers |
 | `/planner` | Duration, region, and trip-type itinerary preview |
+| `/destinations/[slug]` | Destination story, quick facts, and research status |
 
 ## Data and itinerary behavior
 

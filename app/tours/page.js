@@ -4,6 +4,7 @@
 import { useState } from 'react';
 import { DESTINATIONS_DB } from '@/lib/data';
 import { MapPin, Search } from 'lucide-react';
+import Link from 'next/link';
 
 export default function ToursPage() {
     const [searchTerm, setSearchTerm] = useState("");
@@ -49,7 +50,7 @@ export default function ToursPage() {
                             <article className="card h-100 border-0 shadow-sm">
                                 <div className="destination-image">
                                     <div>
-                                    <h2 className="h4 mb-2">{dest.name}</h2>
+                                    <h2 className="h4 mb-2"><Link href={`/destinations/${dest.id}`} className="text-reset text-decoration-none">{dest.name}</Link></h2>
                                     <div className="small">
                                         <MapPin size={16} className="me-1" />
                                         {dest.state}
@@ -61,9 +62,12 @@ export default function ToursPage() {
                                 <span className="badge text-bg-light align-self-start mb-4">
                                         {dest.type.toUpperCase()}
                                     </span>
-                                <button type="button" className="btn btn-outline-forest w-100 mt-auto" onClick={() => toggleSavedPlace(dest.id)}>
+                                <div className="d-grid gap-2 mt-auto">
+                                <Link href={`/destinations/${dest.id}`} className="btn btn-forest">Read destination story</Link>
+                                <button type="button" className="btn btn-outline-forest w-100" onClick={() => toggleSavedPlace(dest.id)}>
                                     {savedPlaces.includes(dest.id) ? 'Remove from bucket list' : 'Add to bucket list'}
                                 </button>
+                                </div>
                                 </div>
                             </article>
                         </div>
