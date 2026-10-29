@@ -39,7 +39,21 @@ export default function DestinationStoryContent({ destination }) {
 
                 <section className="alert alert-light border mb-5">
                     <h2 className="h5">Research status</h2>
-                    <p className="mb-0">This page currently has a verified summary only. History, tradition, belief, architecture, and legends are not expanded here until they have source references. This prevents Yatra from presenting invented stories as fact.</p>
+                    <p className="mb-0">
+                        {story.contentStatus === 'partially-researched'
+                            ? `This destination has verified official resources and selected source-backed claims. The full narrative remains incomplete. Last checked: ${story.verifiedAt}.`
+                            : 'This page currently has a verified summary only. History, tradition, belief, architecture, and legends are not expanded here until they have source references.'}
+                    </p>
+                </section>
+
+                <section className="border-top pt-4 mb-5">
+                    <h2 className="h4">Official resources</h2>
+                    <p className="text-secondary">These links were checked against the destination authority. Opening an external website does not complete a booking in Yatra. Never share external-site passwords, OTPs, or payment details with this app.</p>
+                    {story.officialLinks.length > 0 ? (
+                        <div className="vstack gap-2">
+                            {story.officialLinks.map(link => <a key={link.url + link.type} href={link.url} target="_blank" rel="noopener noreferrer" className="btn btn-outline-forest text-start">{link.label} <span aria-hidden="true">↗</span></a>)}
+                        </div>
+                    ) : <div className="alert alert-light border mb-0">No verified official website or booking link is currently recorded for this destination.</div>}
                 </section>
 
                 <section id="visit-cost" className="border-top pt-4 mb-5">
@@ -52,6 +66,12 @@ export default function DestinationStoryContent({ destination }) {
                     <h2 className="h4">Explore transport</h2>
                     <p className="text-secondary">Create or update your journey to see external transport links for each itinerary leg. Nothing is booked inside Yatra.</p>
                     <Link href="/planner" className="btn btn-outline-forest">Open planner</Link>
+                </section>
+
+                <section className="border-top pt-4 mb-5">
+                    <h2 className="h4">Source references</h2>
+                    {story.sourceReferences.length > 0 ? <ul className="small">{story.sourceReferences.map(source => <li key={source.url}><a href={source.url} target="_blank" rel="noopener noreferrer">{source.title}</a> — {source.publisher}; claim: {source.claim}; checked {source.lastChecked}.</li>)}</ul> : <p className="text-secondary mb-0">No destination-specific source references have been verified yet.</p>}
+                    {story.claims.length > 0 && <><h3 className="h6 mt-4">Verified claims</h3><ul className="small mb-0">{story.claims.map(claim => <li key={claim.text}>{claim.text} <a href={claim.sourceUrl} target="_blank" rel="noopener noreferrer">View supporting source</a></li>)}</ul></>}
                 </section>
 
                 {related.length > 0 && <section className="border-top pt-4 mb-5"><h2 className="h4">Read related stories</h2><div className="row g-3">{related.map(item => <div className="col-12 col-md-4" key={item.id}><Link href={`/destinations/${item.id}`} className="d-block border rounded-3 p-3 text-decoration-none text-reset h-100"><strong>{item.name}</strong><div className="small text-secondary mt-1">{item.state}</div></Link></div>)}</div></section>}

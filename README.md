@@ -43,6 +43,8 @@ or mark a journey as booked.
 - Add a destination from its story page to the saved itinerary without
   discarding the existing local plan, then recalculate route and budget
   estimates.
+- Show verified official temple resources and claim-level source references
+  where they have been checked.
 - Generate a prototype itinerary from duration, region, and travel style.
 - View generated activities in a chronological timeline.
 
@@ -104,11 +106,11 @@ python python/itinerary_helper.py --days 7 --state "Uttar Pradesh"
 | `/planner` | Duration, region, and trip-type itinerary preview |
 | `/destinations/[slug]` | Destination story, journey actions, cost estimate, and related destinations |
 
-Destination storytelling status: the reusable page and schema are implemented,
-but 0 destinations currently have fully researched, source-backed detailed
-stories. All current destination records have summary-only content and are
-explicitly marked as awaiting research rather than being filled with invented
-history.
+Destination research status: 35 records are in the catalogue. Three currently
+have verified official authority links and claim-level official-source records
+(Kashi Vishwanath, Tirupati TTD, and Somnath), but none has a complete
+source-backed detailed story yet. The remaining 32 records show an honest
+unavailable state until their official links and claims are verified.
 
 ## Data and itinerary behavior
 
