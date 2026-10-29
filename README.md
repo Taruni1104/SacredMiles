@@ -28,6 +28,10 @@ Tailwind CSS.
 
 The frontend does not require MySQL or Python to start.
 
+Transport links are redirect-only. The app does not expose provider credentials,
+search live availability, collect booking passwords or OTPs, process payments,
+or mark a journey as booked.
+
 ## Current capabilities
 
 - Choose Pilgrimage Focused, Sightseeing & Culture, or Balanced Journey.
@@ -35,6 +39,7 @@ The frontend does not require MySQL or Python to start.
 - View destination markers and popups on an India map.
 - Open a canonical destination story page from tour cards and map markers.
 - Use a shared destination-story schema that marks incomplete research explicitly.
+- Open external Uber, Rapido, IRCTC, and Google bus-search links for itinerary legs.
 - Generate a prototype itinerary from duration, region, and travel style.
 - View generated activities in a chronological timeline.
 
