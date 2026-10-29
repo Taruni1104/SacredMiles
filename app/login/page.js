@@ -5,13 +5,16 @@ import { useRouter, useSearchParams } from 'next/navigation';
 import Link from 'next/link';
 import { storeUser } from '@/lib/auth';
 import { apiRequest, isApiConfigured } from '@/lib/api';
+import { Eye, EyeOff } from 'lucide-react';
 
 function LoginForm() {
     const router = useRouter();
     const searchParams = useSearchParams();
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+    const [showPassword, setShowPassword] = useState(false);
     const [error, setError] = useState('');
+    const registered = searchParams.get('registered') === '1';
 
     const handleSubmit = async (event) => {
         event.preventDefault();
@@ -55,11 +58,17 @@ function LoginForm() {
                     <p className="section-label">Welcome back</p>
                     <h1 className="h2 mb-3">Sign in to your Yatra</h1>
                     <p className="text-secondary">Your plans, bucket-list places, and saved trips stay connected to your account.</p>
+                    {registered && <div className="alert alert-success">Account created. Sign in to open your complete SacredMiles workspace.</div>}
                     <form onSubmit={handleSubmit} className="vstack gap-3">
                         <label className="form-label mb-0" htmlFor="login-email">Email</label>
-                        <input id="login-email" className="form-control" type="email" required value={email} onChange={(event) => setEmail(event.target.value)} />
+                        <input id="login-email" className="form-control" type="email" required value={email || searchParams.get('email') || ''} onChange={(event) => setEmail(event.target.value)} />
                         <label className="form-label mb-0" htmlFor="login-password">Password</label>
-                        <input id="login-password" className="form-control" type="password" required value={password} onChange={(event) => setPassword(event.target.value)} />
+                        <div className="input-group">
+                            <input id="login-password" className="form-control" type={showPassword ? 'text' : 'password'} required value={password} onChange={(event) => setPassword(event.target.value)} />
+                            <button className="btn btn-outline-secondary" type="button" onClick={() => setShowPassword(value => !value)} aria-label={showPassword ? 'Hide password' : 'Show password'} aria-pressed={showPassword}>
+                                {showPassword ? <EyeOff size={18} /> : <Eye size={18} />}
+                            </button>
+                        </div>
                         {error && <div className="alert alert-danger mb-0">{error}</div>}
                         <button className="btn btn-forest mt-2" type="submit">Login</button>
                     </form>
