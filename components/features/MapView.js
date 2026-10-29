@@ -5,6 +5,7 @@ import { MapContainer, TileLayer, Marker, Popup, Polyline } from 'react-leaflet'
 import 'leaflet/dist/leaflet.css';
 import L from 'leaflet';
 import { DESTINATIONS_DB } from '@/lib/data';
+import Link from 'next/link';
 
 // Fix for Leaflet default icon not loading correctly in Next.js
 const iconUrl = 'https://unpkg.com/leaflet@1.7.1/dist/images/marker-icon.png';
@@ -28,7 +29,8 @@ export default function MapView({ itinerary = [] }) {
         return {
             position: [dest.lat, dest.lng],
             title: dest.name,
-            description: dest.description
+            description: dest.description,
+            slug: dest.id
         };
     }).filter(Boolean);
 
@@ -55,6 +57,7 @@ export default function MapView({ itinerary = [] }) {
                         <div className="font-sans">
                             <h3 className="font-bold text-sm mb-1">{marker.title}</h3>
                             <p className="text-xs text-muted-foreground m-0">{marker.description}</p>
+                            <Link href={`/destinations/${marker.slug}`} className="small d-inline-block mt-2">Read the destination story</Link>
                         </div>
                     </Popup>
                 </Marker>
