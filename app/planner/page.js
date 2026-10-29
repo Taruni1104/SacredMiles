@@ -21,7 +21,16 @@ function PlannerContent() {
     const [startDate, setStartDate] = useState(new Date().toISOString().slice(0, 10));
 
     // State for output
-    const [itinerary, setItinerary] = useState([]);
+    const [itinerary, setItinerary] = useState(() => {
+        try {
+            return typeof window === 'undefined'
+                ? []
+                : JSON.parse(window.localStorage.getItem('yatra-itinerary') || '[]');
+        } catch (error) {
+            console.error('Unable to load saved itinerary:', error);
+            return [];
+        }
+    });
 
     // Get unique states from DB for dropdown
     const states = ['All India', ...new Set(DESTINATIONS_DB.map(d => d.state))];

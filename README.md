@@ -40,6 +40,9 @@ or mark a journey as booked.
 - Open a canonical destination story page from tour cards and map markers.
 - Use a shared destination-story schema that marks incomplete research explicitly.
 - Open external Uber, Rapido, IRCTC, and Google bus-search links for itinerary legs.
+- Add a destination from its story page to the saved itinerary without
+  discarding the existing local plan, then recalculate route and budget
+  estimates.
 - Generate a prototype itinerary from duration, region, and travel style.
 - View generated activities in a chronological timeline.
 
@@ -99,7 +102,13 @@ python python/itinerary_helper.py --days 7 --state "Uttar Pradesh"
 | `/tours` | Searchable destination catalogue |
 | `/map` | Leaflet map with destination markers |
 | `/planner` | Duration, region, and trip-type itinerary preview |
-| `/destinations/[slug]` | Destination story, quick facts, and research status |
+| `/destinations/[slug]` | Destination story, journey actions, cost estimate, and related destinations |
+
+Destination storytelling status: the reusable page and schema are implemented,
+but 0 destinations currently have fully researched, source-backed detailed
+stories. All current destination records have summary-only content and are
+explicitly marked as awaiting research rather than being filled with invented
+history.
 
 ## Data and itinerary behavior
 

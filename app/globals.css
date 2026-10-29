@@ -113,6 +113,15 @@ a {
   padding: 1.25rem;
 }
 
+.destination-placeholder {
+  background: linear-gradient(135deg, var(--stone), #f5f1e8);
+  color: var(--forest);
+  min-height: 9rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
 .map-frame {
   min-height: 600px;
 }

@@ -20,6 +20,10 @@ export default function MapPage() {
             return [];
         }
     });
+    const [selectedDestination] = useState(() => {
+        if (typeof window === 'undefined') return '';
+        return new URLSearchParams(window.location.search).get('destination') || '';
+    });
 
     return (
         <main className="min-h-screen bg-background py-12">
@@ -32,7 +36,7 @@ export default function MapPage() {
                 </div>
 
                 <div className="bg-card p-4 rounded-2xl shadow-sm border">
-                    <MapView itinerary={itinerary} />
+                    <MapView itinerary={itinerary} selectedSlug={selectedDestination} />
                 </div>
 
                 <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
