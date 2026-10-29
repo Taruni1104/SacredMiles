@@ -22,7 +22,7 @@ const customIcon = new L.Icon({
     shadowSize: [41, 41]
 });
 
-export default function MapView({ itinerary = [] }) {
+export default function MapView({ itinerary = [], selectedSlug = '' }) {
     // Create markers from data - showing all destinations by default for the map page
     const markers = DESTINATIONS_DB.map(dest => {
         if (!dest.lat || !dest.lng) return null;
@@ -53,7 +53,7 @@ export default function MapView({ itinerary = [] }) {
 
             {markers.map((marker, idx) => (
                 <Marker key={idx} position={marker.position} icon={customIcon}>
-                    <Popup>
+                    <Popup open={marker.slug === selectedSlug}>
                         <div className="font-sans">
                             <h3 className="font-bold text-sm mb-1">{marker.title}</h3>
                             <p className="text-xs text-muted-foreground m-0">{marker.description}</p>
