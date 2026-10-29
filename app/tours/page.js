@@ -7,7 +7,14 @@ import { MapPin, Search } from 'lucide-react';
 
 export default function ToursPage() {
     const [searchTerm, setSearchTerm] = useState("");
+    const [savedPlaces, setSavedPlaces] = useState([]);
     const destinations = DESTINATIONS_DB;
+
+    const toggleSavedPlace = (id) => {
+        const next = savedPlaces.includes(id) ? savedPlaces.filter(placeId => placeId !== id) : [...savedPlaces, id];
+        setSavedPlaces(next);
+        window.localStorage.setItem('yatra-bucketlist-places', JSON.stringify(next));
+    };
 
     const filteredDestinations = destinations.filter(dest =>
         dest.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -54,7 +61,9 @@ export default function ToursPage() {
                                 <span className="badge text-bg-light align-self-start mb-4">
                                         {dest.type.toUpperCase()}
                                     </span>
-                                <button type="button" className="btn btn-outline-forest w-100 mt-auto">View details</button>
+                                <button type="button" className="btn btn-outline-forest w-100 mt-auto" onClick={() => toggleSavedPlace(dest.id)}>
+                                    {savedPlaces.includes(dest.id) ? 'Remove from bucket list' : 'Add to bucket list'}
+                                </button>
                                 </div>
                             </article>
                         </div>

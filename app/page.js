@@ -3,6 +3,7 @@
 
 import { useRouter } from 'next/navigation';
 import { TRIP_TYPES } from '@/lib/data';
+import { getStoredUser } from '@/lib/auth';
 import { Camera, Scale, ArrowRight } from 'lucide-react';
 
 const IconMap = {
@@ -14,8 +15,8 @@ const IconMap = {
 export default function Home() {
   const router = useRouter();
   const handleSelect = (typeId) => {
-    // Navigate to planner with pre-selected type
-    router.push(`/planner?type=${typeId}`);
+    const destination = `/planner?type=${typeId}`;
+    router.push(getStoredUser() ? destination : `/login?next=${encodeURIComponent(destination)}`);
   };
 
   return (
