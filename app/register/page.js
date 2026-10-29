@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
 import { storeUser } from '@/lib/auth';
+import { apiRequest, isApiConfigured } from '@/lib/api';
 
 export default function RegisterPage() {
     const router = useRouter();
@@ -12,10 +13,24 @@ export default function RegisterPage() {
     const [password, setPassword] = useState('');
     const [error, setError] = useState('');
 
-    const handleSubmit = (event) => {
+    const handleSubmit = async (event) => {
         event.preventDefault();
-        if (password.length < 6) {
-            setError('Use a password with at least 6 characters.');
+        if (password.length < (isApiConfigured() ? 8 : 6)) {
+            setError(`Use a password with at least ${isApiConfigured() ? 8 : 6} characters.`);
+            return;
+        }
+
+        if (isApiConfigured()) {
+            try {
+                const { user } = await apiRequest('/api/auth/register', {
+                    method: 'POST',
+                    body: JSON.stringify({ name, email, password })
+                });
+                storeUser(user);
+                router.replace('/planner');
+            } catch (apiError) {
+                setError(apiError.message);
+            }
             return;
         }
 

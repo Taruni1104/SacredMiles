@@ -4,6 +4,7 @@ import { Suspense, useState } from 'react';
 import { useRouter, useSearchParams } from 'next/navigation';
 import Link from 'next/link';
 import { storeUser } from '@/lib/auth';
+import { apiRequest, isApiConfigured } from '@/lib/api';
 
 function LoginForm() {
     const router = useRouter();
@@ -12,8 +13,24 @@ function LoginForm() {
     const [password, setPassword] = useState('');
     const [error, setError] = useState('');
 
-    const handleSubmit = (event) => {
+    const handleSubmit = async (event) => {
         event.preventDefault();
+        setError('');
+
+        if (isApiConfigured()) {
+            try {
+                const { user } = await apiRequest('/api/auth/login', {
+                    method: 'POST',
+                    body: JSON.stringify({ email, password })
+                });
+                storeUser(user);
+                router.replace(searchParams.get('next') || '/planner');
+            } catch (apiError) {
+                setError(apiError.message);
+            }
+            return;
+        }
+
         const storedAccount = window.localStorage.getItem('yatra-account');
         let account = null;
         try {

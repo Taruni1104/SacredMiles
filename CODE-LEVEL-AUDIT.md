@@ -1,4 +1,58 @@
-# Yatra Code-Level Audit (Draft)
+# SacredMiles Code-Level Audit
+
+## 2026-10-30 stabilization update
+
+This update supersedes the older prototype-only route summary below. The
+current repository includes SacredMiles branding, the 35-entry preliminary
+source register, optional MySQL-backed authentication/expenses/price reports,
+and a local browser-storage fallback.
+
+### Verified commands
+
+| Check | Result |
+|---|---|
+| `node --check server/index.js` | Pass |
+| `npm run lint` | Pass |
+| `npm run build` | Pass |
+| Manual HTTP route smoke checks on port 3000 | Pass for all application routes |
+| Optional API `/api/health` smoke check on port 4001 | Pass |
+| Automated test suite | No test script or test suite configured |
+| MySQL integration | Not verified; no test database credentials were available |
+
+### Current readiness verdict
+
+**READY FOR ACADEMIC DEMONSTRATION** under the local frontend configuration.
+The project is **NOT READY** for an unrestricted production deployment:
+CSRF protection, server-backed UI migration tooling, moderation controls,
+automated tests, and live database integration validation remain open.
+
+### Confirmed implementation status
+
+- Local mode remains available when `NEXT_PUBLIC_API_URL` is unset.
+- Configured API mode supports hashed-password registration/login, HttpOnly
+  sessions, logout, authenticated expense list/create/update/delete, and
+  authenticated price-report list/create.
+- Expense and price-report UI now selects API mode explicitly and does not
+  silently fall back to local storage after an API failure.
+- The source register maps all 35 canonical destinations. Its preliminary
+  status counts are 4 verified, 14 partially verified, and 17 unverified.
+- Manual route checks returned HTTP 200 for `/`, `/login`, `/register`,
+  `/tours`, `/map`, `/planner`, `/budget`, `/bookings`, `/expenses`,
+  `/bucketlist`, and `/destinations/kashi`.
+- External provider links remain redirects/search links, not confirmations.
+
+### Remaining risks
+
+- MySQL schema execution and cross-user ownership were reviewed in code but
+  not exercised against a live test database.
+- Cookie-authenticated state-changing requests need a dedicated CSRF token
+  strategy for production deployment.
+- There is no moderator/admin interface for approving price reports.
+- Existing local records do not yet have an explicit preview-and-confirm
+  migration workflow into a server account.
+- Destination stories remain preliminary/source-backed metadata; the source
+  register is not a complete 35-story research pass.
+- The build warns about multiple lockfiles and inferred workspace root.
 
 **Review date:** 2026-10-29  
 **Scope:** `grand-pilgrimage-app` source tree, configuration, local build, and

@@ -12,6 +12,7 @@
   --danger: #b42318;
   --font-inter: 'Inter', sans-serif;
   --font-playfair: 'Playfair Display', serif;
+  --terracotta: #a85d43;
 }
 
 * {
@@ -26,6 +27,8 @@ body {
   font-family: var(--font-inter);
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
+  background-image: radial-gradient(rgba(22, 59, 50, 0.035) 1px, transparent 1px);
+  background-size: 18px 18px;
 }
 
 a {
@@ -43,11 +46,23 @@ a {
   font-size: 1.75rem;
   font-weight: 700;
   text-decoration: none;
+  letter-spacing: -0.04em;
 }
 
 .hero-panel {
-  background: linear-gradient(135deg, var(--forest), var(--evergreen));
+  background: linear-gradient(120deg, var(--forest) 0%, #285c4b 62%, #8b5a45 160%);
   color: white;
+}
+
+.hero-panel h1 {
+  max-width: 62rem;
+  margin-left: auto;
+  margin-right: auto;
+  letter-spacing: -0.045em;
+}
+
+.hero-panel .lead {
+  color: rgba(255, 255, 255, 0.84);
 }
 
 .hero-panel .text-muted,
@@ -60,6 +75,14 @@ a {
   border: 1px solid var(--stone);
   border-top: 4px solid var(--gold);
   transition: transform 180ms ease, box-shadow 180ms ease;
+}
+
+.journey-card h2 {
+  letter-spacing: -0.035em;
+}
+
+.card {
+  border-radius: 0.25rem !important;
 }
 
 .journey-card:hover,
