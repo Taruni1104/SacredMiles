@@ -128,7 +128,6 @@ app.post('/api/auth/register', authRateLimit, async (request, response) => {
             'INSERT INTO users (name, email, password_hash) VALUES (?, ?, ?)',
             [name.trim(), email.trim().toLowerCase(), passwordHash]
         );
-        await createSession(result.insertId, response);
         response.status(201).json({ user: { name: name.trim(), email: email.trim().toLowerCase() } });
     } catch (error) {
         if (error.code === 'ER_DUP_ENTRY') {
