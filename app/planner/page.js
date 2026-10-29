@@ -36,6 +36,16 @@ function PlannerContent() {
         }, 800);
     };
 
+    const saveTrip = () => {
+        const savedTrips = JSON.parse(window.localStorage.getItem('yatra-bucketlist-trips') || '[]');
+        const trip = {
+            title: `${days}-day ${tripType} Yatra`,
+            days: itinerary,
+            createdAt: new Date().toISOString()
+        };
+        window.localStorage.setItem('yatra-bucketlist-trips', JSON.stringify([trip, ...savedTrips]));
+    };
+
     return (
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
             {/* Left Sidebar - Controls */}
@@ -137,6 +147,7 @@ function PlannerContent() {
                                 <div><strong>Estimated distance</strong><div>{itinerary.reduce((total, day) => total + day.travelDistanceKm, 0)} km</div></div>
                                 <div><strong>Estimated budget</strong><div>₹{getItineraryBudget(itinerary).total.toLocaleString('en-IN')}</div></div>
                                 <div><strong>Travel and stay</strong><div>₹{(getItineraryBudget(itinerary).transport + getItineraryBudget(itinerary).accommodation).toLocaleString('en-IN')}</div></div>
+                                <button type="button" className="btn btn-forest ms-auto" onClick={saveTrip}>Save trip to bucket list</button>
                             </div>
                         </div>
                         <div className="alert alert-light border small">Drag a day to reorder your route. Estimates use straight-line distance and local planning assumptions, not live traffic or booking prices.</div>
