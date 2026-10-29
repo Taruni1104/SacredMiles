@@ -6,6 +6,7 @@ import { useSearchParams } from 'next/navigation';
 import { Card, CardHeader, CardContent, Button } from '@/components/ui';
 import { generateItinerary, getItineraryBudget, DESTINATIONS_DB } from '@/lib/data';
 import ItineraryTimeline from '@/components/features/ItineraryTimeline'; // We will reuse or update this
+import { getTransportProviderLinks } from '@/lib/transport/provider-links';
 import { Calendar, MapPin, Sparkles, Settings } from 'lucide-react';
 
 function PlannerContent() {
@@ -151,6 +152,33 @@ function PlannerContent() {
                             </div>
                         </div>
                         <div className="alert alert-light border small">Drag a day to reorder your route. Estimates use straight-line distance and local planning assumptions, not live traffic or booking prices.</div>
+                        <section className="card border-0 shadow-sm mb-4">
+                            <div className="card-body">
+                                <h3 className="h5">Transport booking links</h3>
+                                <p className="small text-secondary">These links open official or discovery websites. Yatra does not book, verify availability, or mark any service as confirmed.</p>
+                                <div className="vstack gap-3">
+                                    {itinerary.filter(day => day.destinationId).map((day, index, travelDays) => {
+                                        const origin = index === 0 ? 'your starting point' : travelDays[index - 1].location;
+                                        const links = getTransportProviderLinks({ origin, destination: day.location, date: day.date });
+                                        return (
+                                            <div className="border rounded-3 p-3" key={`${day.destinationId}-transport`}>
+                                                <div className="d-flex justify-content-between gap-3 flex-wrap">
+                                                    <strong>{origin} → {day.location}</strong>
+                                                    <span className="badge text-bg-light">Not booked</span>
+                                                </div>
+                                                <div className="d-flex flex-wrap gap-2 mt-2">
+                                                    {links.map(link => (
+                                                        <a key={link.id} href={link.href} target="_blank" rel="noreferrer" className="btn btn-sm btn-outline-forest" title={link.description}>
+                                                            {link.label}
+                                                        </a>
+                                                    ))}
+                                                </div>
+                                            </div>
+                                        );
+                                    })}
+                                </div>
+                            </div>
+                        </section>
                         <ItineraryTimeline
                             days={itinerary}
                             onReorder={(sourceIndex, targetIndex) => {
