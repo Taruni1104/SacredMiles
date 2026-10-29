@@ -17,7 +17,6 @@ function PlannerContent() {
     const [days, setDays] = useState(7);
     const [selectedState, setSelectedState] = useState('All India');
     const [tripType, setTripType] = useState(initialType);
-    const [isGenerating, setIsGenerating] = useState(false);
     const [startDate, setStartDate] = useState(new Date().toISOString().slice(0, 10));
 
     // State for output
@@ -36,14 +35,9 @@ function PlannerContent() {
     const states = ['All India', ...new Set(DESTINATIONS_DB.map(d => d.state))];
 
     const handleGenerate = () => {
-        setIsGenerating(true);
-        // Simulate API delay for effect
-        setTimeout(() => {
-            const result = generateItinerary(days, selectedState, tripType, startDate);
-            setItinerary(result);
-            window.localStorage.setItem('yatra-itinerary', JSON.stringify(result));
-            setIsGenerating(false);
-        }, 800);
+        const result = generateItinerary(days, selectedState, tripType, startDate);
+        setItinerary(result);
+        window.localStorage.setItem('yatra-itinerary', JSON.stringify(result));
     };
 
     const saveTrip = () => {
@@ -103,38 +97,18 @@ function PlannerContent() {
                             <label className="text-sm font-medium text-muted-foreground flex items-center gap-2">
                                 <MapPin className="w-4 h-4" /> Preference Region
                             </label>
-                            <div className="grid grid-cols-2 gap-2">
-                                {states.slice(0, 6).map(st => (
-                                    <button
-                                        key={st}
-                                        onClick={() => setSelectedState(st)}
-                                        className={`
-                                        text-sm px-3 py-2 rounded-lg border transition-all
-                                        ${selectedState === st
-                                                ? 'bg-primary text-white border-primary shadow-md'
-                                                : 'bg-background hover:bg-secondary/10'
-                                            }
-                                    `}
-                                    >
-                                        {st === 'Uttar Pradesh' ? 'UP' : st === 'Andhra Pradesh' ? 'AP' : st === 'Tamil Nadu' ? 'TN' : st}
-                                    </button>
-                                ))}
-                            </div>
-                            {/* Fallback simple select for full list if needed, keeping it visual for now */}
+                            <select className="form-select" value={selectedState} onChange={(event) => setSelectedState(event.target.value)}>
+                                {states.map(state => <option key={state} value={state}>{state}</option>)}
+                            </select>
                         </div>
 
                         <Button
                             onClick={handleGenerate}
                             className="w-full h-12 text-lg font-bold shadow-lg shadow-primary/20"
-                            disabled={isGenerating}
                         >
-                            {isGenerating ? (
-                                <span className="animate-pulse">Consulting the Stars...</span>
-                            ) : (
-                                <span className="flex items-center gap-2">
-                                    Generate Itinerary <Sparkles className="w-5 h-5" />
-                                </span>
-                            )}
+                            <span className="flex items-center gap-2">
+                            Build planning preview <Sparkles className="w-5 h-5" />
+                            </span>
                         </Button>
                     </CardContent>
                 </Card>

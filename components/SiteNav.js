@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import { clearStoredUser, getStoredUser } from '@/lib/auth';
+import { apiRequest, isApiConfigured } from '@/lib/api';
 
 export default function SiteNav() {
     const router = useRouter();
@@ -14,7 +15,14 @@ export default function SiteNav() {
         setUser(getStoredUser());
     }, []);
 
-    const handleLogout = () => {
+    const handleLogout = async () => {
+        if (isApiConfigured()) {
+            try {
+                await apiRequest('/api/auth/logout', { method: 'POST' });
+            } catch (error) {
+                console.error('Unable to end server session:', error);
+            }
+        }
         clearStoredUser();
         setUser(null);
         router.push('/');
@@ -23,7 +31,7 @@ export default function SiteNav() {
     return (
         <nav className="navbar navbar-expand-md sticky-top site-nav">
             <div className="container">
-                <Link href="/" className="brand-mark">Yatra</Link>
+                <Link href="/" className="brand-mark">SacredMiles</Link>
                 <button
                     className="navbar-toggler"
                     type="button"
@@ -38,7 +46,7 @@ export default function SiteNav() {
                 <div className="collapse navbar-collapse" id="siteNavigation">
                     <div className="navbar-nav mx-auto gap-md-3">
                         <Link href="/" className="nav-link">Home</Link>
-                        {user && <><Link href="/tours" className="nav-link">Tours</Link><Link href="/map" className="nav-link">Map</Link><Link href="/planner" className="nav-link">Planner</Link><Link href="/bucketlist" className="nav-link">Bucket List</Link></>}
+                        {user && <><Link href="/tours" className="nav-link">Explore</Link><Link href="/map" className="nav-link">Map</Link><Link href="/planner" className="nav-link">My Journey</Link><Link href="/budget" className="nav-link">Budget</Link><Link href="/expenses" className="nav-link">Expenses</Link><Link href="/bookings" className="nav-link">Bookings</Link><Link href="/bucketlist" className="nav-link">Saved Places</Link></>}
                     </div>
                     <div className="d-flex align-items-center gap-3 mt-3 mt-md-0">
                         {user ? <><span className="small text-secondary">Hi, {user.name}</span><button type="button" className="btn btn-outline-forest" onClick={handleLogout}>Logout</button></> : <><Link href="/login" className="btn btn-link text-decoration-none text-forest p-0">Login</Link><Link href="/register" className="btn btn-forest">Register</Link></>}

@@ -23,13 +23,14 @@ export default function Home() {
     <main className="min-vh-100">
       <section className="hero-panel py-5 py-lg-6">
         <div className="container py-5 text-center">
-          <p className="section-label">A considered journey across India</p>
+          <p className="section-label">SacredMiles · The art of a meaningful journey</p>
           <h1 className="display-2 fw-bold mb-4">
-            Begin Your <span className="text-warning fst-italic">Yatra</span>
+            Your journey deserves more than a <span className="text-warning fst-italic">checklist.</span>
           </h1>
           <p className="lead mx-auto mb-0" style={{ maxWidth: '42rem' }}>
-            Discover sacred places, thoughtful routes, and a calmer way to plan
-            a pilgrimage shaped around your purpose.
+            Every sacred place has a story. Every route has a rhythm. Every
+            journey has a budget. Bring it all together in one thoughtful travel
+            companion.
           </p>
         </div>
       </section>
@@ -51,7 +52,7 @@ export default function Home() {
                     className="btn btn-forest w-100 mt-3"
                     onClick={() => handleSelect(type.id)}
                   >
-                    Select journey <ArrowRight className="ms-2" size={18} />
+                    Plan this journey <ArrowRight className="ms-2" size={18} />
                   </button>
                 </article>
               </div>

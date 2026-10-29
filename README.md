@@ -1,6 +1,6 @@
-# Yatra — Grand Pilgrimage of India
+# SacredMiles — The Art of a Meaningful Journey
 
-Yatra is a Next.js prototype for planning and exploring spiritual journeys
+SacredMiles is a Next.js application for planning and exploring spiritual journeys
 across India. It currently provides a journey-type landing page, a searchable
 destination catalogue, a Leaflet destination map, and a deterministic
 day-by-day itinerary preview.
@@ -35,6 +35,8 @@ or mark a journey as booked.
 ## Current capabilities
 
 - Choose Pilgrimage Focused, Sightseeing & Culture, or Balanced Journey.
+- Use the SacredMiles editorial brand direction across the landing and discovery
+  experience.
 - Browse and search destinations by name, state, or type.
 - View destination markers and popups on an India map.
 - Open a canonical destination story page from tour cards and map markers.
@@ -43,6 +45,10 @@ or mark a journey as booked.
 - Add a destination from its story page to the saved itinerary without
   discarding the existing local plan, then recalculate route and budget
   estimates.
+- Review a categorized local budget at `/budget`.
+- Track transport and destination research tasks at `/bookings`.
+- Record personal trip spending at `/expenses` and submit pending user price
+  reports from destination story pages.
 - Show verified official temple resources and claim-level source references
   where they have been checked.
 - Generate a prototype itinerary from duration, region, and travel style.
@@ -50,10 +56,11 @@ or mark a journey as booked.
 
 ## Current limitations
 
-This is not yet a production booking platform. It currently has no required
-database, authentication, bookings, payments, destination images, transport
-schedules, route optimization, or cost calculation. The map displays markers
-but does not draw a generated route. AI and Redis are intentionally deferred.
+This is not yet a production booking platform. MySQL remains optional, but the
+optional API now supports hashed-password accounts, server sessions, personal
+expenses, and pending price reports. Payments, destination images, transport
+schedules, route optimization, and live cost calculation are not implemented.
+AI and Redis are intentionally deferred.
 
 The complete architecture and planned service boundaries are documented in
 [ARCHITECTURE.md](./ARCHITECTURE.md). Planned integrations are listed in
@@ -73,9 +80,12 @@ npm run dev
 
 Open [http://localhost:3000](http://localhost:3000).
 
-No environment variables are required for the frontend. To run the optional
-Node/MySQL API, copy `.env.example` to `.env.local`, configure MySQL, and run
-`database/schema.sql` first. Never commit real secrets.
+No environment variables are required for the local frontend mode. To enable
+the optional Node/MySQL API, copy `.env.example` to `.env.local`, configure
+MySQL, run `database/schema.sql` first, and set
+`NEXT_PUBLIC_API_URL=http://localhost:4000` for the Next.js process. The API
+uses HttpOnly session cookies and does not store plaintext passwords. Never
+commit real secrets.
 
 ## Commands
 
@@ -104,13 +114,24 @@ python python/itinerary_helper.py --days 7 --state "Uttar Pradesh"
 | `/tours` | Searchable destination catalogue |
 | `/map` | Leaflet map with destination markers |
 | `/planner` | Duration, region, and trip-type itinerary preview |
+| `/budget` | Itemized local budget estimate with travelers and contingency controls |
+| `/bookings` | Local booking checklist with explicit booking statuses |
+| `/expenses` | Personal expense tracker with CSV export and API-backed mode |
 | `/destinations/[slug]` | Destination story, journey actions, cost estimate, and related destinations |
 
-Destination research status: 35 records are in the catalogue. Three currently
-have verified official authority links and claim-level official-source records
-(Kashi Vishwanath, Tirupati TTD, and Somnath), but none has a complete
-source-backed detailed story yet. The remaining 32 records show an honest
-unavailable state until their official links and claims are verified.
+Destination research status: all 35 catalogue records are now matched to the
+preliminary source register dated 2026-10-30. That register contains 4 verified
+source entries, 14 partially verified entries, and 17 unverified candidates.
+Kashi Vishwanath, Tirupati TTD, and Somnath also retain selected manually
+verified official resources in the canonical data. The register is source
+discovery, not a complete story pass: no destination has a complete detailed
+source-backed narrative yet, and unverified or partially verified links are
+not presented as confirmed booking links.
+
+The imported research artifacts are preserved in
+`docs/research/`, including the preliminary report and CSV register. The
+runtime mapping and source metadata are in
+`lib/sacredmiles-source-register.json` and `lib/data.js`.
 
 ## Data and itinerary behavior
 
@@ -122,6 +143,21 @@ local array and are not geographically optimized.
 The original planning artifacts in the parent workspace include a detailed
 pilgrimage document, cost spreadsheet, prompt, and mind map. They are source
 requirements and reference material; they are not imported at runtime.
+
+The current planner, budget, and booking tracker remain local-first previews.
+They use browser storage and deterministic assumptions; they do not provide
+live fares, availability, accommodation inventory, official fee quotes,
+payments, or booking confirmations.
+
+Without `NEXT_PUBLIC_API_URL`, personal expenses and user-reported prices are
+local-only and versioned in browser storage. With the optional API enabled,
+registration and login use server sessions and the API exposes MySQL-backed
+expense and price-report records. The current expense/report screens still
+retain their local-first workflow; migrating their full CRUD UI to server sync,
+including conflict handling for existing browser records, remains a separate
+step. Price reports remain pending user reports; a trusted moderator/admin
+workflow and receipt file storage are not implemented, so they do not become
+official estimates automatically.
 
 ## Security and privacy
 

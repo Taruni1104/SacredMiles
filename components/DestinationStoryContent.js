@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import DestinationActions from '@/components/DestinationActions';
 import { getDestinationBySlug, getDestinationStory } from '@/lib/data';
+import PriceReportForm from '@/components/PriceReportForm';
 
 export default function DestinationStoryContent({ destination }) {
     const story = getDestinationStory(destination);
@@ -42,7 +43,9 @@ export default function DestinationStoryContent({ destination }) {
                     <p className="mb-0">
                         {story.contentStatus === 'partially-researched'
                             ? `This destination has verified official resources and selected source-backed claims. The full narrative remains incomplete. Last checked: ${story.verifiedAt}.`
-                            : 'This page currently has a verified summary only. History, tradition, belief, architecture, and legends are not expanded here until they have source references.'}
+                            : story.contentStatus === 'source-discovery'
+                                ? `A preliminary source register is available, but the source and its individual claims still require destination-page verification. The full narrative remains incomplete. Last checked: ${story.verifiedAt}.`
+                                : 'This page currently has a verified summary only. History, tradition, belief, architecture, and legends are not expanded here until they have source references.'}
                     </p>
                 </section>
 
@@ -61,6 +64,7 @@ export default function DestinationStoryContent({ destination }) {
                     <p className="text-secondary">Only a provisional local visit allowance is available. It is optional and is not an official ticket, donation, darshan, or seva price.</p>
                     {story.costEstimates.map(cost => <div className="d-flex justify-content-between border-bottom py-2" key={cost.name}><span>{cost.name} <small className="text-secondary">({cost.status})</small></span><strong>₹{cost.amount.toLocaleString('en-IN')}</strong></div>)}
                 </section>
+                <PriceReportForm destination={destination} estimate={story.costEstimates[0].amount} />
 
                 <section id="transport" className="border-top pt-4 mb-5">
                     <h2 className="h4">Explore transport</h2>
