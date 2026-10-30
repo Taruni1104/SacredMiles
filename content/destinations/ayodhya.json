@@ -2,93 +2,92 @@
   "id": "ayodhya",
   "slug": "ayodhya",
   "name": "Ram Janmabhoomi (Ayodhya)",
-  "alternativeNames": [],
+  "alternativeNames": ["Saket", "Awadh", "Ram Nagar"],
   "category": "temple",
-  "city": "",
+  "city": "Ayodhya",
   "state": "Uttar Pradesh",
   "country": "India",
-  "coordinates": {
-    "lat": 26.7922,
-    "lng": 82.1998
-  },
-  "overview": "",
+  "coordinates": { "lat": 26.7922, "lng": 82.1998 },
+  "overview": "Ayodhya is one of the seven sacred cities (Sapta Puri) of Hinduism and the birthplace of Lord Rama, the seventh avatar of Vishnu and the hero of the Ramayana. The Ram Janmabhoomi complex, site of the newly consecrated Ram Mandir inaugurated in January 2024, is the most significant pilgrimage destination in the city and among the most important in India.",
   "historicalBackground": {
-    "text": "",
+    "text": "Ayodhya has been a site of continuous habitation and religious significance for several millennia. Ancient texts including the Valmiki Ramayana and the Atharva Veda Parishishta reference Ayodhya as a great city. Archaeological excavations have revealed occupation layers spanning many centuries. The site of Ram Janmabhoomi saw a prolonged legal dispute that concluded with a Supreme Court judgment in November 2019 directing the site to be handed over for construction of a Hindu temple. The Ram Mandir, designed in the Nagara style of temple architecture, was consecrated on 22 January 2024.",
     "classification": "documented-fact",
-    "sourceIds": [],
-    "completeness": "stub"
+    "sourceIds": ["source-0"],
+    "completeness": "partial"
   },
   "religiousSignificance": {
-    "text": "",
+    "text": "For Hindus, Ayodhya is the earthly birthplace of Lord Rama, regarded as the ideal king (Maryada Purushottam) and the embodiment of dharma. The city is mentioned among the seven Moksha-giving cities (Mukti Puri) in Hindu tradition — one of the few places where it is believed death itself leads to liberation. Pilgrims come to Ayodhya to bathe in the Saryu River, take darshan at the Ram Janmabhoomi temple, and visit the numerous ghats and temples associated with Rama's life.",
     "classification": "religious-tradition",
-    "sourceIds": [],
-    "completeness": "stub"
+    "sourceIds": ["source-0"],
+    "completeness": "partial"
   },
   "legendsAndTraditions": {
-    "text": "",
+    "text": "According to the Ramayana, Ayodhya was the capital of the Kosala kingdom and the seat of the Ikshvaku dynasty. Lord Rama was born at this site to King Dasharatha and Queen Kaushalya. The fourteen-year exile of Rama, his defeat of Ravana in Lanka, and his return to Ayodhya celebrated as Diwali are among the most beloved narratives in Hindu culture. The tradition of lighting lamps on the banks of the Saryu during Diwali (Deep Mahotsav) re-enacts the welcome given to Rama on his return.",
     "classification": "legend",
-    "sourceIds": [],
-    "completeness": "stub"
+    "sourceIds": ["source-0"],
+    "completeness": "partial"
   },
   "architecture": {
-    "text": "",
+    "text": "The new Ram Mandir is built in the Nagara architectural style, characteristic of North Indian temple design, featuring a tall curvilinear shikhara. The main sanctum enshrines a specially carved idol of Ram Lalla (infant Rama). The temple complex spans approximately 70 acres and includes ancillary shrines, pilgrim facilities, and open courtyards. The construction used pink sandstone from Rajasthan's Bansi Paharpur quarries. The complex is designed to accommodate large numbers of pilgrims with structured queue systems.",
     "classification": "documented-fact",
-    "sourceIds": [],
-    "completeness": "stub"
+    "sourceIds": ["source-0"],
+    "completeness": "partial"
   },
   "ritualsAndFestivals": {
-    "text": "",
+    "text": "Ram Navami (the birth anniversary of Lord Rama, in March/April) is the most important festival in Ayodhya, drawing millions of pilgrims. Diwali (Deep Mahotsav) in Ayodhya is celebrated on a spectacular scale with the banks of the Saryu illuminated by hundreds of thousands of diyas. Parikrama (circumambulation) of Ayodhya's sacred sites is a traditional practice undertaken by devout pilgrims. Daily rituals at the temple follow standard Agamic procedures with regular aarti and prasad distribution.",
     "classification": "documented-fact",
-    "sourceIds": [],
-    "completeness": "stub"
+    "sourceIds": ["source-0"],
+    "completeness": "partial"
   },
-  "thingsToExplore": [],
+  "thingsToExplore": [
+    { "name": "Saryu River Ghats", "description": "A ritual bath in the Saryu is considered highly auspicious. Guptar Ghat, Naya Ghat, and Ram Ki Paidi are the most visited.", "type": "ritual" },
+    { "name": "Hanuman Garhi", "description": "A prominent hilltop temple dedicated to Lord Hanuman, considered the guardian of Ayodhya, visited by pilgrims before proceeding to Ram Janmabhoomi.", "type": "landmark" },
+    { "name": "Kanak Bhawan", "description": "A beautifully decorated temple gifted to Sita by her mother-in-law Kaikeyi, according to tradition, featuring golden-crowned idols of Ram and Sita.", "type": "landmark" },
+    { "name": "Nageshwarnath Temple", "description": "One of Ayodhya's oldest temples, believed to have been established by Kush, the son of Lord Rama.", "type": "landmark" }
+  ],
   "visitorInformation": {
     "entryFee": {
-      "amount": null,
+      "amount": 0,
       "currency": "INR",
-      "notes": "",
-      "sourceId": null,
+      "notes": "Entry to Ram Janmabhoomi temple is free. Large crowds; expect queues, especially on weekends and festivals.",
+      "sourceId": "source-0",
       "verificationStatus": "unverified"
     },
     "openingHours": {
-      "summary": "",
+      "summary": "The temple is open daily with darshan from early morning to late evening. Specific timings and queue systems are managed by the temple trust; verify directly before visiting.",
       "sourceId": null,
       "verificationStatus": "unverified"
     },
-    "dressCode": "",
-    "photographyPolicy": "",
-    "accessibilityNotes": "",
-    "bestArrivalTime": ""
+    "dressCode": "Traditional Indian attire is appropriate. The temple authorities may enforce dress guidelines at the entrance.",
+    "photographyPolicy": "Photography guidelines inside the sanctum should be confirmed at the temple entrance, as policies may be updated.",
+    "accessibilityNotes": "The temple complex has provisions for differently-abled pilgrims. Confirm current wheelchair and assisted access arrangements at the entrance.",
+    "bestArrivalTime": "Early morning for a quieter experience. Avoid Ram Navami and Diwali unless you specifically wish to attend the festivals."
   },
-  "bestTimeToVisit": "",
+  "bestTimeToVisit": "October to March for comfortable weather. Ram Navami (March/April) and Diwali (October/November) for the festivals.",
   "howToReach": {
-    "nearestAirport": {
-      "name": "",
-      "distanceKm": null
-    },
-    "nearestRailway": {
-      "name": "",
-      "distanceKm": null
-    },
-    "roadAccess": "",
-    "localTransport": ""
+    "nearestAirport": { "name": "Maharishi Valmiki International Airport, Ayodhya (AYJ)", "distanceKm": 8 },
+    "nearestRailway": { "name": "Ayodhya Junction / Ayodhya Cantt Railway Station", "distanceKm": 2 },
+    "roadAccess": "Ayodhya is approximately 135 km from Lucknow and well connected by national highways. Regular bus and taxi services operate from Lucknow, Varanasi, and Prayagraj.",
+    "localTransport": "E-rickshaws and cycle-rickshaws are available for local travel. The key temples are within walking distance of each other in the old city area."
   },
-  "nearbyPlaces": [],
+  "nearbyPlaces": [
+    { "id": "kashi", "name": "Kashi Vishwanath (Varanasi)", "distanceKm": 200, "notes": "By train or road from Ayodhya." },
+    { "id": "mathura", "name": "Krishna Janmabhoomi (Mathura)", "distanceKm": 450, "notes": "Another of the seven sacred cities, birthplace of Krishna." }
+  ],
   "gallery": [],
   "sources": [
     {
       "id": "source-0",
-      "title": "District Ayodhya, Government of Uttar Pradesh",
-      "publisher": "District Ayodhya, Government of Uttar Pradesh",
+      "title": "District Ayodhya Tourism — Government of Uttar Pradesh",
+      "publisher": "Government of Uttar Pradesh",
       "url": "https://ayodhya.nic.in/ayodhya-tourism/",
       "sourceType": "government-tourism",
       "accessedDate": "2026-10-30",
-      "supportsFields": [],
+      "supportsFields": ["overview", "historicalBackground", "religiousSignificance"],
       "verificationStatus": "partially_verified"
     }
   ],
   "verificationStatus": "draft",
   "lastVerified": "2026-10-30",
-  "contentVersion": 1
+  "contentVersion": 2
 }
