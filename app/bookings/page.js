@@ -13,9 +13,25 @@ function readItinerary() {
     }
 }
 
+function readSavedBookings(checklist) {
+    try {
+        const saved = typeof window === 'undefined' ? null : JSON.parse(window.localStorage.getItem('yatra-bookings') || 'null');
+        if (!Array.isArray(saved)) return checklist;
+        // Merge persisted statuses back onto the freshly generated checklist
+        // so adding new itinerary days shows up while old choices are preserved.
+        const statusMap = Object.fromEntries(saved.map(item => [item.id, item.status]));
+        return checklist.map(item => statusMap[item.id] ? { ...item, status: statusMap[item.id] } : item);
+    } catch {
+        return checklist;
+    }
+}
+
 export default function BookingsPage() {
     const [itinerary] = useState(readItinerary);
-    const [bookings, setBookings] = useState(() => createBookingChecklist(readItinerary()));
+    const [bookings, setBookings] = useState(() => {
+        const checklist = createBookingChecklist(readItinerary());
+        return readSavedBookings(checklist);
+    });
 
     const updateStatus = (id, status) => {
         const next = bookings.map(item => item.id === id ? { ...item, status } : item);

@@ -1,0 +1,104 @@
+{
+  "id": "trimbakeshwar",
+  "slug": "trimbakeshwar",
+  "name": "Trimbakeshwar",
+  "alternativeNames": [],
+  "category": "temple",
+  "city": "",
+  "state": "Maharashtra",
+  "country": "India",
+  "coordinates": {
+    "lat": 19.9439,
+    "lng": 73.5352
+  },
+  "overview": "",
+  "historicalBackground": {
+    "text": "",
+    "classification": "documented-fact",
+    "sourceIds": [],
+    "completeness": "stub"
+  },
+  "religiousSignificance": {
+    "text": "",
+    "classification": "religious-tradition",
+    "sourceIds": [],
+    "completeness": "stub"
+  },
+  "legendsAndTraditions": {
+    "text": "",
+    "classification": "legend",
+    "sourceIds": [],
+    "completeness": "stub"
+  },
+  "architecture": {
+    "text": "",
+    "classification": "documented-fact",
+    "sourceIds": [],
+    "completeness": "stub"
+  },
+  "ritualsAndFestivals": {
+    "text": "",
+    "classification": "documented-fact",
+    "sourceIds": [],
+    "completeness": "stub"
+  },
+  "thingsToExplore": [],
+  "visitorInformation": {
+    "entryFee": {
+      "amount": null,
+      "currency": "INR",
+      "notes": "",
+      "sourceId": null,
+      "verificationStatus": "unverified"
+    },
+    "openingHours": {
+      "summary": "",
+      "sourceId": null,
+      "verificationStatus": "unverified"
+    },
+    "dressCode": "",
+    "photographyPolicy": "",
+    "accessibilityNotes": "",
+    "bestArrivalTime": ""
+  },
+  "bestTimeToVisit": "",
+  "howToReach": {
+    "nearestAirport": {
+      "name": "",
+      "distanceKm": null
+    },
+    "nearestRailway": {
+      "name": "",
+      "distanceKm": null
+    },
+    "roadAccess": "",
+    "localTransport": ""
+  },
+  "nearbyPlaces": [],
+  "gallery": [],
+  "sources": [
+    {
+      "id": "source-0",
+      "title": "District Nashik, Government of Maharashtra",
+      "publisher": "District Nashik, Government of Maharashtra",
+      "url": "https://nashik.gov.in/en/tourist-place/trimbakeshwar-temple/",
+      "sourceType": "government-tourism",
+      "accessedDate": "2026-10-30",
+      "supportsFields": [],
+      "verificationStatus": "unverified"
+    },
+    {
+      "id": "source-1",
+      "title": "Incredible India / Ministry of Tourism",
+      "publisher": "Incredible India / Ministry of Tourism",
+      "url": "https://www.incredibleindia.gov.in/en/maharashtra/nashik/trimbakeshwar-temple",
+      "sourceType": "government-tourism",
+      "accessedDate": "2026-10-30",
+      "supportsFields": [],
+      "verificationStatus": "unverified"
+    }
+  ],
+  "verificationStatus": "draft",
+  "lastVerified": "2026-10-30",
+  "contentVersion": 1
+}

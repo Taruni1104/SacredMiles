@@ -8,7 +8,14 @@ import Link from 'next/link';
 
 export default function ToursPage() {
     const [searchTerm, setSearchTerm] = useState("");
-    const [savedPlaces, setSavedPlaces] = useState([]);
+    const [savedPlaces, setSavedPlaces] = useState(() => {
+        try {
+            const stored = typeof window !== 'undefined' && window.localStorage.getItem('yatra-bucketlist-places');
+            return stored ? JSON.parse(stored) : [];
+        } catch {
+            return [];
+        }
+    });
     const [stateFilter, setStateFilter] = useState('All states');
     const [typeFilter, setTypeFilter] = useState('All styles');
     const [timeFilter, setTimeFilter] = useState('Any time');

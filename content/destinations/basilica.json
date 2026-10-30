@@ -1,0 +1,94 @@
+{
+  "id": "basilica",
+  "slug": "basilica",
+  "name": "Basilica of Bom Jesus",
+  "alternativeNames": [],
+  "category": "sightseeing",
+  "city": "",
+  "state": "Goa",
+  "country": "India",
+  "coordinates": {
+    "lat": 15.5009,
+    "lng": 73.9116
+  },
+  "overview": "",
+  "historicalBackground": {
+    "text": "",
+    "classification": "documented-fact",
+    "sourceIds": [],
+    "completeness": "stub"
+  },
+  "religiousSignificance": {
+    "text": "",
+    "classification": "religious-tradition",
+    "sourceIds": [],
+    "completeness": "stub"
+  },
+  "legendsAndTraditions": {
+    "text": "",
+    "classification": "legend",
+    "sourceIds": [],
+    "completeness": "stub"
+  },
+  "architecture": {
+    "text": "",
+    "classification": "documented-fact",
+    "sourceIds": [],
+    "completeness": "stub"
+  },
+  "ritualsAndFestivals": {
+    "text": "",
+    "classification": "documented-fact",
+    "sourceIds": [],
+    "completeness": "stub"
+  },
+  "thingsToExplore": [],
+  "visitorInformation": {
+    "entryFee": {
+      "amount": null,
+      "currency": "INR",
+      "notes": "",
+      "sourceId": null,
+      "verificationStatus": "unverified"
+    },
+    "openingHours": {
+      "summary": "",
+      "sourceId": null,
+      "verificationStatus": "unverified"
+    },
+    "dressCode": "",
+    "photographyPolicy": "",
+    "accessibilityNotes": "",
+    "bestArrivalTime": ""
+  },
+  "bestTimeToVisit": "",
+  "howToReach": {
+    "nearestAirport": {
+      "name": "",
+      "distanceKm": null
+    },
+    "nearestRailway": {
+      "name": "",
+      "distanceKm": null
+    },
+    "roadAccess": "",
+    "localTransport": ""
+  },
+  "nearbyPlaces": [],
+  "gallery": [],
+  "sources": [
+    {
+      "id": "source-0",
+      "title": "Goa Tourism Development Corporation",
+      "publisher": "Goa Tourism Development Corporation",
+      "url": "https://goa-tourism.com/church/basilica-of-bom-jesus/",
+      "sourceType": "government-tourism",
+      "accessedDate": "2026-10-30",
+      "supportsFields": [],
+      "verificationStatus": "unverified"
+    }
+  ],
+  "verificationStatus": "draft",
+  "lastVerified": "2026-10-30",
+  "contentVersion": 1
+}

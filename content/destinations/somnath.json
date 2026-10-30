@@ -1,0 +1,104 @@
+{
+  "id": "somnath",
+  "slug": "somnath",
+  "name": "Somnath",
+  "alternativeNames": [],
+  "category": "temple",
+  "city": "",
+  "state": "Gujarat",
+  "country": "India",
+  "coordinates": {
+    "lat": 20.888,
+    "lng": 70.4012
+  },
+  "overview": "",
+  "historicalBackground": {
+    "text": "",
+    "classification": "documented-fact",
+    "sourceIds": [],
+    "completeness": "stub"
+  },
+  "religiousSignificance": {
+    "text": "",
+    "classification": "religious-tradition",
+    "sourceIds": [],
+    "completeness": "stub"
+  },
+  "legendsAndTraditions": {
+    "text": "",
+    "classification": "legend",
+    "sourceIds": [],
+    "completeness": "stub"
+  },
+  "architecture": {
+    "text": "",
+    "classification": "documented-fact",
+    "sourceIds": [],
+    "completeness": "stub"
+  },
+  "ritualsAndFestivals": {
+    "text": "",
+    "classification": "documented-fact",
+    "sourceIds": [],
+    "completeness": "stub"
+  },
+  "thingsToExplore": [],
+  "visitorInformation": {
+    "entryFee": {
+      "amount": null,
+      "currency": "INR",
+      "notes": "",
+      "sourceId": null,
+      "verificationStatus": "unverified"
+    },
+    "openingHours": {
+      "summary": "",
+      "sourceId": null,
+      "verificationStatus": "unverified"
+    },
+    "dressCode": "",
+    "photographyPolicy": "",
+    "accessibilityNotes": "",
+    "bestArrivalTime": ""
+  },
+  "bestTimeToVisit": "",
+  "howToReach": {
+    "nearestAirport": {
+      "name": "",
+      "distanceKm": null
+    },
+    "nearestRailway": {
+      "name": "",
+      "distanceKm": null
+    },
+    "roadAccess": "",
+    "localTransport": ""
+  },
+  "nearbyPlaces": [],
+  "gallery": [],
+  "sources": [
+    {
+      "id": "source-0",
+      "title": "Shree Somnath Trust — listed as organizer by Government of India Ministry of Tourism's Utsav portal",
+      "publisher": "Shree Somnath Trust — listed as organizer by Government of India Ministry of Tourism's Utsav portal",
+      "url": "https://somnath.org/",
+      "sourceType": "government-tourism",
+      "accessedDate": "2026-10-30",
+      "supportsFields": [],
+      "verificationStatus": "partially_verified"
+    },
+    {
+      "id": "source-1",
+      "title": "Utsav / Ministry of Tourism initiative",
+      "publisher": "Utsav / Ministry of Tourism initiative",
+      "url": "https://utsav.gov.in/view-darshan/somnath-live-darshan",
+      "sourceType": "government-tourism",
+      "accessedDate": "2026-10-30",
+      "supportsFields": [],
+      "verificationStatus": "partially_verified"
+    }
+  ],
+  "verificationStatus": "draft",
+  "lastVerified": "2026-10-30",
+  "contentVersion": 1
+}

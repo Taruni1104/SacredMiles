@@ -1,0 +1,104 @@
+{
+  "id": "mahakaleshwar",
+  "slug": "mahakaleshwar",
+  "name": "Mahakaleshwar (Ujjain)",
+  "alternativeNames": [],
+  "category": "temple",
+  "city": "",
+  "state": "Madhya Pradesh",
+  "country": "India",
+  "coordinates": {
+    "lat": 23.1848,
+    "lng": 75.7677
+  },
+  "overview": "",
+  "historicalBackground": {
+    "text": "",
+    "classification": "documented-fact",
+    "sourceIds": [],
+    "completeness": "stub"
+  },
+  "religiousSignificance": {
+    "text": "",
+    "classification": "religious-tradition",
+    "sourceIds": [],
+    "completeness": "stub"
+  },
+  "legendsAndTraditions": {
+    "text": "",
+    "classification": "legend",
+    "sourceIds": [],
+    "completeness": "stub"
+  },
+  "architecture": {
+    "text": "",
+    "classification": "documented-fact",
+    "sourceIds": [],
+    "completeness": "stub"
+  },
+  "ritualsAndFestivals": {
+    "text": "",
+    "classification": "documented-fact",
+    "sourceIds": [],
+    "completeness": "stub"
+  },
+  "thingsToExplore": [],
+  "visitorInformation": {
+    "entryFee": {
+      "amount": null,
+      "currency": "INR",
+      "notes": "",
+      "sourceId": null,
+      "verificationStatus": "unverified"
+    },
+    "openingHours": {
+      "summary": "",
+      "sourceId": null,
+      "verificationStatus": "unverified"
+    },
+    "dressCode": "",
+    "photographyPolicy": "",
+    "accessibilityNotes": "",
+    "bestArrivalTime": ""
+  },
+  "bestTimeToVisit": "",
+  "howToReach": {
+    "nearestAirport": {
+      "name": "",
+      "distanceKm": null
+    },
+    "nearestRailway": {
+      "name": "",
+      "distanceKm": null
+    },
+    "roadAccess": "",
+    "localTransport": ""
+  },
+  "nearbyPlaces": [],
+  "gallery": [],
+  "sources": [
+    {
+      "id": "source-0",
+      "title": "Shri Mahakaleshwar Temple Management Committee, MP Government domain",
+      "publisher": "Shri Mahakaleshwar Temple Management Committee, MP Government domain",
+      "url": "https://www.shrimahakaleshwar.mp.gov.in/timing",
+      "sourceType": "government-tourism",
+      "accessedDate": "2026-10-30",
+      "supportsFields": [],
+      "verificationStatus": "unverified"
+    },
+    {
+      "id": "source-1",
+      "title": "Official temple services/booking page",
+      "publisher": "Official temple services/booking page",
+      "url": "https://www.shrimahakaleshwar.mp.gov.in/services/bhasmaarti",
+      "sourceType": "government-tourism",
+      "accessedDate": "2026-10-30",
+      "supportsFields": [],
+      "verificationStatus": "unverified"
+    }
+  ],
+  "verificationStatus": "draft",
+  "lastVerified": "2026-10-30",
+  "contentVersion": 1
+}

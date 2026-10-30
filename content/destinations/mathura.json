@@ -1,0 +1,94 @@
+{
+  "id": "mathura",
+  "slug": "mathura",
+  "name": "Krishna Janmabhoomi (Mathura)",
+  "alternativeNames": [],
+  "category": "temple",
+  "city": "",
+  "state": "Uttar Pradesh",
+  "country": "India",
+  "coordinates": {
+    "lat": 27.4924,
+    "lng": 77.6737
+  },
+  "overview": "",
+  "historicalBackground": {
+    "text": "",
+    "classification": "documented-fact",
+    "sourceIds": [],
+    "completeness": "stub"
+  },
+  "religiousSignificance": {
+    "text": "",
+    "classification": "religious-tradition",
+    "sourceIds": [],
+    "completeness": "stub"
+  },
+  "legendsAndTraditions": {
+    "text": "",
+    "classification": "legend",
+    "sourceIds": [],
+    "completeness": "stub"
+  },
+  "architecture": {
+    "text": "",
+    "classification": "documented-fact",
+    "sourceIds": [],
+    "completeness": "stub"
+  },
+  "ritualsAndFestivals": {
+    "text": "",
+    "classification": "documented-fact",
+    "sourceIds": [],
+    "completeness": "stub"
+  },
+  "thingsToExplore": [],
+  "visitorInformation": {
+    "entryFee": {
+      "amount": null,
+      "currency": "INR",
+      "notes": "",
+      "sourceId": null,
+      "verificationStatus": "unverified"
+    },
+    "openingHours": {
+      "summary": "",
+      "sourceId": null,
+      "verificationStatus": "unverified"
+    },
+    "dressCode": "",
+    "photographyPolicy": "",
+    "accessibilityNotes": "",
+    "bestArrivalTime": ""
+  },
+  "bestTimeToVisit": "",
+  "howToReach": {
+    "nearestAirport": {
+      "name": "",
+      "distanceKm": null
+    },
+    "nearestRailway": {
+      "name": "",
+      "distanceKm": null
+    },
+    "roadAccess": "",
+    "localTransport": ""
+  },
+  "nearbyPlaces": [],
+  "gallery": [],
+  "sources": [
+    {
+      "id": "source-0",
+      "title": "District Mathura, Government of Uttar Pradesh",
+      "publisher": "District Mathura, Government of Uttar Pradesh",
+      "url": "https://mathura.nic.in/tourist-place/shri-krishna-janambhumi/",
+      "sourceType": "government-tourism",
+      "accessedDate": "2026-10-30",
+      "supportsFields": [],
+      "verificationStatus": "partially_verified"
+    }
+  ],
+  "verificationStatus": "draft",
+  "lastVerified": "2026-10-30",
+  "contentVersion": 1
+}

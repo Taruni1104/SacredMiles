@@ -1,0 +1,104 @@
+{
+  "id": "udupi",
+  "slug": "udupi",
+  "name": "Udupi Sri Krishna Matha",
+  "alternativeNames": [],
+  "category": "temple",
+  "city": "",
+  "state": "Karnataka",
+  "country": "India",
+  "coordinates": {
+    "lat": 13.3409,
+    "lng": 74.7421
+  },
+  "overview": "",
+  "historicalBackground": {
+    "text": "",
+    "classification": "documented-fact",
+    "sourceIds": [],
+    "completeness": "stub"
+  },
+  "religiousSignificance": {
+    "text": "",
+    "classification": "religious-tradition",
+    "sourceIds": [],
+    "completeness": "stub"
+  },
+  "legendsAndTraditions": {
+    "text": "",
+    "classification": "legend",
+    "sourceIds": [],
+    "completeness": "stub"
+  },
+  "architecture": {
+    "text": "",
+    "classification": "documented-fact",
+    "sourceIds": [],
+    "completeness": "stub"
+  },
+  "ritualsAndFestivals": {
+    "text": "",
+    "classification": "documented-fact",
+    "sourceIds": [],
+    "completeness": "stub"
+  },
+  "thingsToExplore": [],
+  "visitorInformation": {
+    "entryFee": {
+      "amount": null,
+      "currency": "INR",
+      "notes": "",
+      "sourceId": null,
+      "verificationStatus": "unverified"
+    },
+    "openingHours": {
+      "summary": "",
+      "sourceId": null,
+      "verificationStatus": "unverified"
+    },
+    "dressCode": "",
+    "photographyPolicy": "",
+    "accessibilityNotes": "",
+    "bestArrivalTime": ""
+  },
+  "bestTimeToVisit": "",
+  "howToReach": {
+    "nearestAirport": {
+      "name": "",
+      "distanceKm": null
+    },
+    "nearestRailway": {
+      "name": "",
+      "distanceKm": null
+    },
+    "roadAccess": "",
+    "localTransport": ""
+  },
+  "nearbyPlaces": [],
+  "gallery": [],
+  "sources": [
+    {
+      "id": "source-0",
+      "title": "Udupi Shri Krishna Matha (site self-identifies as official; domain linkage not independently established in this pass)",
+      "publisher": "Udupi Shri Krishna Matha (site self-identifies as official; domain linkage not independently established in this pass)",
+      "url": "https://shrikrishnamatha.org/",
+      "sourceType": "government-tourism",
+      "accessedDate": "2026-10-30",
+      "supportsFields": [],
+      "verificationStatus": "unverified"
+    },
+    {
+      "id": "source-1",
+      "title": "Another site self-identifying as Sri Krishna Matha official website; domain relationship unresolved",
+      "publisher": "Another site self-identifying as Sri Krishna Matha official website; domain relationship unresolved",
+      "url": "https://krishnamatha.org/",
+      "sourceType": "government-tourism",
+      "accessedDate": "2026-10-30",
+      "supportsFields": [],
+      "verificationStatus": "unverified"
+    }
+  ],
+  "verificationStatus": "draft",
+  "lastVerified": "2026-10-30",
+  "contentVersion": 1
+}

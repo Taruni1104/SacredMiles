@@ -10,7 +10,7 @@ import { Eye, EyeOff } from 'lucide-react';
 function LoginForm() {
     const router = useRouter();
     const searchParams = useSearchParams();
-    const [email, setEmail] = useState('');
+    const [email, setEmail] = useState(() => searchParams.get('email') || '');
     const [password, setPassword] = useState('');
     const [showPassword, setShowPassword] = useState(false);
     const [error, setError] = useState('');
@@ -42,7 +42,7 @@ function LoginForm() {
             console.error('Unable to read the local account:', parseError);
         }
 
-        if (!account || account.email !== email || account.password !== password) {
+        if (!account || account.email.toLowerCase() !== email.toLowerCase() || account.password !== password) {
             setError('No matching local account found. Register first or check your details.');
             return;
         }
@@ -61,7 +61,7 @@ function LoginForm() {
                     {registered && <div className="alert alert-success">Account created. Sign in to open your complete SacredMiles workspace.</div>}
                     <form onSubmit={handleSubmit} className="vstack gap-3">
                         <label className="form-label mb-0" htmlFor="login-email">Email</label>
-                        <input id="login-email" className="form-control" type="email" required value={email || searchParams.get('email') || ''} onChange={(event) => setEmail(event.target.value)} />
+                        <input id="login-email" className="form-control" type="email" required value={email} onChange={(event) => setEmail(event.target.value)} />
                         <label className="form-label mb-0" htmlFor="login-password">Password</label>
                         <div className="input-group">
                             <input id="login-password" className="form-control" type={showPassword ? 'text' : 'password'} required value={password} onChange={(event) => setPassword(event.target.value)} />

@@ -13,6 +13,7 @@ const MapView = dynamic(() => import('@/components/features/MapView'), {
 export default function MapPage() {
     const [itinerary] = useState(() => {
         try {
+            if (typeof window === 'undefined') return [];
             const savedItinerary = window.localStorage.getItem('yatra-itinerary');
             return savedItinerary ? JSON.parse(savedItinerary) : [];
         } catch (error) {
