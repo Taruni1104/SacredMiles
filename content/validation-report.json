@@ -1,0 +1,221 @@
+{
+  "generatedAt": "2026-10-30T00:21:22.794Z",
+  "filesChecked": 35,
+  "canonicalIds": 35,
+  "errors": 0,
+  "warnings": 0,
+  "errorList": [],
+  "warningList": [],
+  "completion": [
+    {
+      "id": "kashi",
+      "name": "Kashi Vishwanath (Varanasi)",
+      "pct": 100,
+      "status": "draft"
+    },
+    {
+      "id": "ayodhya",
+      "name": "Ram Janmabhoomi (Ayodhya)",
+      "pct": 0,
+      "status": "draft"
+    },
+    {
+      "id": "basilica",
+      "name": "Basilica of Bom Jesus",
+      "pct": 0,
+      "status": "draft"
+    },
+    {
+      "id": "dakshineswar",
+      "name": "Dakshineswar Kali Temple",
+      "pct": 0,
+      "status": "draft"
+    },
+    {
+      "id": "dwarka",
+      "name": "Dwarkadhish (Dwarka)",
+      "pct": 0,
+      "status": "draft"
+    },
+    {
+      "id": "goldentemple",
+      "name": "Golden Temple (Amritsar)",
+      "pct": 0,
+      "status": "draft"
+    },
+    {
+      "id": "guruvayur",
+      "name": "Guruvayur Temple",
+      "pct": 0,
+      "status": "draft"
+    },
+    {
+      "id": "hampi",
+      "name": "Virupaksha Temple (Hampi)",
+      "pct": 0,
+      "status": "draft"
+    },
+    {
+      "id": "haridwar",
+      "name": "Har Ki Pauri (Haridwar)",
+      "pct": 0,
+      "status": "draft"
+    },
+    {
+      "id": "jaipur",
+      "name": "Birla Mandir (Jaipur)",
+      "pct": 0,
+      "status": "draft"
+    },
+    {
+      "id": "kalighat",
+      "name": "Kalighat Kali Temple (Kolkata)",
+      "pct": 0,
+      "status": "draft"
+    },
+    {
+      "id": "kamakhya",
+      "name": "Kamakhya Temple (Guwahati)",
+      "pct": 0,
+      "status": "draft"
+    },
+    {
+      "id": "kanyakumari",
+      "name": "Vivekananda Rock (Kanyakumari)",
+      "pct": 0,
+      "status": "draft"
+    },
+    {
+      "id": "kedarnath",
+      "name": "Kedarnath",
+      "pct": 0,
+      "status": "draft"
+    },
+    {
+      "id": "khajuraho",
+      "name": "Khajuraho Group of Monuments",
+      "pct": 0,
+      "status": "draft"
+    },
+    {
+      "id": "konark",
+      "name": "Sun Temple (Konark)",
+      "pct": 0,
+      "status": "draft"
+    },
+    {
+      "id": "madurai",
+      "name": "Meenakshi Amman (Madurai)",
+      "pct": 0,
+      "status": "draft"
+    },
+    {
+      "id": "mahakaleshwar",
+      "name": "Mahakaleshwar (Ujjain)",
+      "pct": 0,
+      "status": "draft"
+    },
+    {
+      "id": "mathura",
+      "name": "Krishna Janmabhoomi (Mathura)",
+      "pct": 0,
+      "status": "draft"
+    },
+    {
+      "id": "mysore",
+      "name": "Mysore Palace",
+      "pct": 0,
+      "status": "draft"
+    },
+    {
+      "id": "padmanabhaswamy",
+      "name": "Padmanabhaswamy Temple (Thiruvananthapuram)",
+      "pct": 0,
+      "status": "draft"
+    },
+    {
+      "id": "puri",
+      "name": "Jagannath Temple (Puri)",
+      "pct": 0,
+      "status": "draft"
+    },
+    {
+      "id": "pushkar",
+      "name": "Brahma Temple (Pushkar)",
+      "pct": 0,
+      "status": "draft"
+    },
+    {
+      "id": "rameswaram",
+      "name": "Ramanathaswamy (Rameswaram)",
+      "pct": 0,
+      "status": "draft"
+    },
+    {
+      "id": "rishikesh",
+      "name": "Rishikesh",
+      "pct": 0,
+      "status": "draft"
+    },
+    {
+      "id": "sarnath",
+      "name": "Sarnath",
+      "pct": 0,
+      "status": "draft"
+    },
+    {
+      "id": "shantadurga",
+      "name": "Shanta Durga Temple",
+      "pct": 0,
+      "status": "draft"
+    },
+    {
+      "id": "shirdi",
+      "name": "Sai Baba Temple (Shirdi)",
+      "pct": 0,
+      "status": "draft"
+    },
+    {
+      "id": "somnath",
+      "name": "Somnath",
+      "pct": 0,
+      "status": "draft"
+    },
+    {
+      "id": "srisailam",
+      "name": "Mallikarjuna (Srisailam)",
+      "pct": 0,
+      "status": "draft"
+    },
+    {
+      "id": "tirupati",
+      "name": "Tirumala Venkateswara (Tirupati)",
+      "pct": 0,
+      "status": "draft"
+    },
+    {
+      "id": "trimbakeshwar",
+      "name": "Trimbakeshwar",
+      "pct": 0,
+      "status": "draft"
+    },
+    {
+      "id": "udaipur",
+      "name": "City Palace (Udaipur)",
+      "pct": 0,
+      "status": "draft"
+    },
+    {
+      "id": "udupi",
+      "name": "Udupi Sri Krishna Matha",
+      "pct": 0,
+      "status": "draft"
+    },
+    {
+      "id": "vaishnodevi",
+      "name": "Vaishno Devi (Katra)",
+      "pct": 0,
+      "status": "draft"
+    }
+  ]
+}

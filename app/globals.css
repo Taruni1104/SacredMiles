@@ -467,3 +467,203 @@ h3 {
 .delay-300 {
   animation-delay: 300ms;
 }
+
+/* ── Global smooth transitions ───────────────────────────────────────────── */
+
+/* Every interactive element gets a subtle transition by default */
+a,
+button,
+.btn,
+.nav-link,
+.card,
+select,
+input,
+textarea {
+    transition: all 180ms ease;
+}
+
+/* Page-level fade when navigating — applied to the main content wrapper */
+main {
+    animation: fadeIn 0.35s ease-out both;
+}
+
+/* Slightly stronger entrance for cards */
+.card {
+    transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
+}
+
+.card:hover {
+    box-shadow: 0 6px 24px rgba(22, 59, 50, 0.10) !important;
+}
+
+/* Buttons feel springy */
+.btn {
+    transition: background-color 160ms ease, border-color 160ms ease,
+                color 160ms ease, box-shadow 160ms ease, transform 120ms ease;
+}
+.btn:active {
+    transform: scale(0.97);
+}
+
+/* Nav links underline slide-in */
+.nav-link {
+    position: relative;
+    transition: color 180ms ease;
+}
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--gold);
+    transition: width 220ms ease;
+}
+.nav-link:hover::after,
+.nav-link.active::after {
+    width: 100%;
+}
+
+/* Form controls */
+.form-control,
+.form-select {
+    transition: border-color 180ms ease, box-shadow 180ms ease;
+}
+.form-control:focus,
+.form-select:focus {
+    border-color: var(--forest);
+    box-shadow: 0 0 0 3px rgba(22, 59, 50, 0.12);
+}
+
+/* ── Planner page ──────────────────────────────────────────────────────────── */
+
+.planner-generate-btn {
+    position: relative;
+    overflow: hidden;
+    background: var(--forest);
+    border-color: var(--forest);
+    color: white;
+    transition: background 200ms ease, transform 120ms ease, box-shadow 200ms ease;
+}
+.planner-generate-btn:hover:not(:disabled) {
+    background: var(--evergreen);
+    box-shadow: 0 4px 18px rgba(22, 59, 50, 0.30);
+    transform: translateY(-1px);
+}
+.planner-generate-btn:disabled {
+    opacity: 0.75;
+    cursor: not-allowed;
+}
+
+/* Spinner for lucide Loader2 */
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+.animate-spin {
+    animation: spin 0.75s linear infinite;
+}
+
+/* Success toast inside the sidebar */
+.planner-toast {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.6rem 1rem;
+    background: #e6f4ee;
+    border: 1px solid #a3d4b8;
+    border-radius: 0.5rem;
+    color: #145c35;
+    font-size: 0.875rem;
+    font-weight: 500;
+    animation: slideUp 0.4s ease-out both;
+}
+
+/* Stat cells in the summary card */
+.planner-stat {
+    display: flex;
+    flex-direction: column;
+    gap: 0.15rem;
+}
+.planner-stat-label {
+    font-size: 0.75rem;
+    color: var(--muted-text);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+}
+
+/* Transport rows */
+.transport-row {
+    transition: background 180ms ease;
+}
+.transport-row:hover {
+    background: rgba(22, 59, 50, 0.03);
+}
+
+/* Save trip button state */
+.btn-save-trip {
+    min-width: 11rem;
+    transition: background 200ms ease, border-color 200ms ease,
+                color 200ms ease, transform 120ms ease;
+}
+.btn-save-trip:not(:disabled):hover {
+    transform: translateY(-1px);
+}
+
+/* Empty state */
+.planner-empty {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 400px;
+    text-align: center;
+    padding: 2rem;
+    border: 2px dashed var(--stone);
+    border-radius: 1rem;
+    gap: 0.75rem;
+}
+.planner-empty-icon {
+    font-size: 3rem;
+    line-height: 1;
+    margin-bottom: 0.5rem;
+    animation: fadeIn 0.6s ease-out both;
+}
+
+/* Spacing helpers used by planner */
+.space-y-2 > * + * { margin-top: 0.5rem; }
+.space-y-3 > * + * { margin-top: 0.75rem; }
+.space-y-6 > * + * { margin-top: 1.5rem; }
+.space-y-8 > * + * { margin-top: 2rem; }
+
+/* Large-screen grid columns */
+@media (min-width: 992px) {
+    .lg\:col-span-4 {
+        grid-column: span 4 / span 4;
+    }
+    .lg\:col-span-8 {
+        grid-column: span 8 / span 8;
+    }
+    .lg\:grid-cols-12 {
+        grid-template-columns: repeat(12, minmax(0, 1fr));
+    }
+}
+
+/* max-w helpers */
+.max-w-md { max-width: 28rem; }
+.mx-auto  { margin-left: auto; margin-right: auto; }
+
+/* h-11 used by Button component */
+.h-11 { height: 2.75rem; }
+.h-12 { height: 3rem; }
+
+/* w-4 / w-5 / w-8 icon sizes */
+.w-4 { width: 1rem; }
+.w-5 { width: 1.25rem; }
+.w-8 { width: 2rem; }
+.h-4 { height: 1rem; }
+.h-5 { height: 1.25rem; }
+.h-8 { height: 2rem; }
+
+/* top-24 for sticky sidebar */
+.top-24 { top: 6rem; }

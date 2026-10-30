@@ -1,16 +1,29 @@
 import { notFound } from 'next/navigation';
 import { getDestinationBySlug } from '@/lib/data';
+import { getDestinationContent, getApprovedGallery } from '@/lib/content';
 import DestinationStoryContent from '@/components/DestinationStoryContent';
 
-export function generateMetadata({ params }) {
-    const destination = getDestinationBySlug(params.slug);
+// In Next.js 15+ params is a Promise and must be awaited.
+export async function generateMetadata({ params }) {
+    const { slug } = await params;
+    const destination = getDestinationBySlug(slug);
+    const content = getDestinationContent(slug);
+    const description = content?.overview || destination?.description || '';
     return destination
-        ? { title: `${destination.name} | Yatra`, description: destination.description }
-        : { title: 'Destination not found | Yatra' };
+        ? { title: `${destination.name} | SacredMiles`, description }
+        : { title: 'Destination not found | SacredMiles' };
 }
 
-export default function DestinationStoryPage({ params }) {
-    const destination = getDestinationBySlug(params.slug);
+export default async function DestinationStoryPage({ params }) {
+    const { slug } = await params;
+    const destination = getDestinationBySlug(slug);
     if (!destination) notFound();
-    return <DestinationStoryContent destination={destination} />;
+
+    // Load approved structured content if available.
+    // If null (draft / not yet approved) the page falls back gracefully to
+    // the existing story content from lib/data.js — nothing breaks.
+    const content = getDestinationContent(slug);
+    const gallery = content ? getApprovedGallery(content) : [];
+
+    return <DestinationStoryContent destination={destination} content={content} gallery={gallery} />;
 }

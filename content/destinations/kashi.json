@@ -1,0 +1,147 @@
+{
+  "id": "kashi",
+  "slug": "kashi",
+  "name": "Kashi Vishwanath (Varanasi)",
+  "alternativeNames": ["Vishwanath", "Jyotirlinga of Kashi", "Banaras", "Benares"],
+  "category": "temple",
+  "city": "Varanasi",
+  "state": "Uttar Pradesh",
+  "country": "India",
+  "coordinates": { "lat": 25.3109, "lng": 82.9739 },
+
+  "overview": "Kashi Vishwanath is one of the twelve Jyotirlingas of Lord Shiva and the most sacred temple in Varanasi — a city regarded in Hindu tradition as the eternal spiritual capital of India. The current temple stands within the newly developed Kashi Vishwanath Corridor, which opened in December 2021 and significantly expanded the pilgrimage precinct along the Ganges ghats.",
+
+  "historicalBackground": {
+    "text": "Varanasi is one of the continuously inhabited cities in the world, with human settlement evidence extending over several millennia. The Kashi Vishwanath temple site has undergone multiple reconstructions over the centuries; the current structure was built in 1780 CE by Ahilyabai Holkar of Indore. Earlier structures at the site were damaged and rebuilt across different periods. The 2021 Kashi Vishwanath Corridor project, commissioned by the Government of Uttar Pradesh, integrated the temple precinct with the Dashashwamedh Ghat area.",
+    "classification": "documented-fact",
+    "sourceIds": ["source-0", "source-1"],
+    "completeness": "partial"
+  },
+
+  "religiousSignificance": {
+    "text": "According to Hindu belief and scriptural tradition, Kashi (Varanasi) is the abode of Lord Shiva and is considered to grant moksha — liberation from the cycle of birth and death — to those who die within the city. The Kashi Vishwanath Jyotirlinga is regarded as one of the most powerful manifestations of Shiva. Pilgrims come to receive darshan of the linga, bathe in the Ganges, and participate in the Ganga Aarti at the ghats.",
+    "classification": "religious-tradition",
+    "sourceIds": ["source-0"],
+    "completeness": "partial"
+  },
+
+  "legendsAndTraditions": {
+    "text": "Traditional accounts describe Kashi as the city that Lord Shiva holds on the tip of his trident, kept above the waters at the time of cosmic dissolution. The Skanda Purana contains extensive accounts of Kashi's spiritual status. These are sacred narratives within the Hindu tradition and are not independently established historical events.",
+    "classification": "legend",
+    "sourceIds": ["source-0"],
+    "completeness": "stub"
+  },
+
+  "architecture": {
+    "text": "The current Kashi Vishwanath temple was constructed in 1780 CE. Its shikhara (spire) is coated in gold donated by Maharaja Ranjit Singh of Punjab in 1835. The Kashi Vishwanath Corridor, inaugurated in December 2021, provides a direct visual and physical connection between the temple and the Dashashwamedh Ghat. The corridor covers an area of approximately 5.4 lakh square feet and incorporates heritage structures, galleries, and open promenades.",
+    "classification": "documented-fact",
+    "sourceIds": ["source-0", "source-1"],
+    "completeness": "partial"
+  },
+
+  "ritualsAndFestivals": {
+    "text": "The temple conducts six aartis daily: Mangala Aarti (pre-dawn), Bhog Aarti, Saptarishi Aarti, Shringaar (evening), Shayan Aarti, and Bhog Aarti. Maha Shivaratri is the most significant annual festival. Online puja and darshan slot booking is available through the official Trust portal. Specific timings and slot availability vary; visitors should confirm current schedules directly from the official website before planning travel.",
+    "classification": "documented-fact",
+    "sourceIds": ["source-0"],
+    "completeness": "partial"
+  },
+
+  "thingsToExplore": [
+    {
+      "name": "Kashi Vishwanath Corridor",
+      "description": "The 2021 precinct connecting the temple to Dashashwamedh Ghat with heritage galleries and open walkways.",
+      "type": "landmark"
+    },
+    {
+      "name": "Dashashwamedh Ghat Ganga Aarti",
+      "description": "An evening ritual on the banks of the Ganges, considered one of the most visually and spiritually significant rituals in Varanasi.",
+      "type": "ritual"
+    },
+    {
+      "name": "Manikarnika Ghat",
+      "description": "One of the most sacred cremation ghats in Varanasi, significant in Hindu belief about liberation. Visitors should approach with quiet respect.",
+      "type": "cultural"
+    },
+    {
+      "name": "Sarnath",
+      "description": "The site where the Buddha delivered his first sermon, located approximately 10 km from Varanasi city. A UNESCO-recognised heritage site.",
+      "type": "experience"
+    }
+  ],
+
+  "visitorInformation": {
+    "entryFee": {
+      "amount": 0,
+      "currency": "INR",
+      "notes": "No entry fee for the temple itself. Some puja and darshan slots booked online may carry service charges.",
+      "sourceId": "source-0",
+      "verificationStatus": "partially_verified"
+    },
+    "openingHours": {
+      "summary": "Temple opens for Mangala Aarti before dawn; general darshan continues until late evening. Exact current timings should be confirmed from the official Trust website.",
+      "sourceId": "source-0",
+      "verificationStatus": "unverified"
+    },
+    "dressCode": "Traditional Indian attire is recommended. Avoid shorts and sleeveless tops. Head covering may be required in certain inner sanctum areas.",
+    "photographyPolicy": "Photography inside the main sanctum is typically restricted. Follow current temple authority notices.",
+    "accessibilityNotes": "The Kashi Vishwanath Corridor has improved access to the precinct. Wheelchairs and dedicated entry for differently-abled pilgrims — confirm current arrangements with the Trust.",
+    "bestArrivalTime": "Early morning for Mangala Aarti or evenings for Ganga Aarti at the ghats. Avoid peak festival periods unless you plan for extended queues."
+  },
+
+  "bestTimeToVisit": "October to March (cooler months). Maha Shivaratri (February/March) attracts very large crowds. Avoid peak summer heat.",
+
+  "howToReach": {
+    "nearestAirport": { "name": "Lal Bahadur Shastri International Airport, Varanasi", "distanceKm": 26 },
+    "nearestRailway": { "name": "Varanasi Junction (BSB)", "distanceKm": 3 },
+    "roadAccess": "Varanasi is well connected by national highways. The temple is in the old city; auto-rickshaws and e-rickshaws operate in the narrow lanes.",
+    "localTransport": "The Dashashwamedh Ghat area is best reached on foot or by e-rickshaw from major road points. Vehicles cannot access the innermost lanes."
+  },
+
+  "nearbyPlaces": [
+    { "id": "sarnath", "name": "Sarnath", "distanceKm": 10, "notes": "Buddha's first sermon site; accessible by road from Varanasi." },
+    { "id": "ayodhya", "name": "Ram Janmabhoomi (Ayodhya)", "distanceKm": 200, "notes": "By rail or road from Varanasi." }
+  ],
+
+  "gallery": [
+    {
+      "wikimediaFile": "File:Kashi Vishwanath Temple.jpg",
+      "thumbUrl": null,
+      "fullUrl": null,
+      "filePageUrl": "https://commons.wikimedia.org/wiki/File:Kashi_Vishwanath_Temple.jpg",
+      "title": "Kashi Vishwanath Temple",
+      "author": null,
+      "license": null,
+      "licenseUrl": null,
+      "attributionRequired": true,
+      "usable": false,
+      "notes": "Candidate file identified. URLs, author, and licence must be retrieved via Wikimedia Commons API before marking usable."
+    }
+  ],
+
+  "sources": [
+    {
+      "id": "source-0",
+      "title": "Shri Kashi Vishwanath Temple Trust Official Portal",
+      "publisher": "Shri Kashi Vishwanath Temple Trust",
+      "url": "https://shrikashivishwanath.org/",
+      "sourceType": "official-temple",
+      "accessedDate": "2026-10-30",
+      "supportsFields": ["overview", "religiousSignificance", "ritualsAndFestivals", "visitorInformation"],
+      "verificationStatus": "partially_verified"
+    },
+    {
+      "id": "source-1",
+      "title": "Kashi Vishwanath Corridor — Government of Uttar Pradesh",
+      "publisher": "Government of Uttar Pradesh",
+      "url": "https://kashivishwanathcorridor.in/",
+      "sourceType": "government-tourism",
+      "accessedDate": "2026-10-30",
+      "supportsFields": ["historicalBackground", "architecture"],
+      "verificationStatus": "unverified"
+    }
+  ],
+
+  "verificationStatus": "draft",
+  "lastVerified": "2026-10-30",
+  "contentVersion": 1
+}
