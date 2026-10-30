@@ -2,103 +2,91 @@
   "id": "tirupati",
   "slug": "tirupati",
   "name": "Tirumala Venkateswara (Tirupati)",
-  "alternativeNames": [],
+  "alternativeNames": ["Tirupati Balaji", "Venkateswara", "Srinivasa", "Govinda"],
   "category": "temple",
-  "city": "",
+  "city": "Tirupati",
   "state": "Andhra Pradesh",
   "country": "India",
-  "coordinates": {
-    "lat": 13.6288,
-    "lng": 79.4192
-  },
-  "overview": "",
+  "coordinates": { "lat": 13.6288, "lng": 79.4192 },
+  "overview": "The Tirumala Venkateswara Temple atop the Tirumala hills is the most visited place of worship in the world, drawing an average of 50,000 to 100,000 pilgrims every single day. Dedicated to Lord Venkateswara — a form of Vishnu — it stands at an elevation of approximately 853 metres in the Seshachalam Hills of Andhra Pradesh. The temple is managed by the Tirumala Tirupati Devasthanams (TTD), one of the wealthiest religious endowments in the world.",
   "historicalBackground": {
-    "text": "",
+    "text": "The temple's origins are traced to at least the early medieval period, with inscriptions and copper plates from the 5th century CE referencing worship at Tirumala. The Pallava dynasty (6th–9th century CE) and later the Chola and Vijayanagara rulers made significant contributions to the temple's construction and endowment. The Vijayanagara Empire (14th–17th century CE) was particularly instrumental — Emperor Krishnadevaraya made several important donations and additions in the 16th century. The modern administrative body, Tirumala Tirupati Devasthanams (TTD), was constituted in 1933 under the Madras Hindu Religious Endowments Act.",
     "classification": "documented-fact",
-    "sourceIds": [],
-    "completeness": "stub"
+    "sourceIds": ["source-0"],
+    "completeness": "partial"
   },
   "religiousSignificance": {
-    "text": "",
+    "text": "Venkateswara is venerated as the presiding deity of the Kali Yuga — the current cosmic age in Hindu belief — and is considered to fulfil the material and spiritual wishes of sincere devotees. The temple is one of the 108 Divya Desams (sacred Vishnu abodes) mentioned in the hymns of the Alvar saints. Pilgrims offer their hair at Tirumala as an act of complete surrender to the deity, a ritual known as 'mokku.' The idol of Venkateswara is believed by tradition to be a self-manifested (Swayambhu) form. The seven hills of Tirumala are identified with the seven hoods of Adishesha, the divine serpent on whom Vishnu rests.",
     "classification": "religious-tradition",
-    "sourceIds": [],
-    "completeness": "stub"
+    "sourceIds": ["source-0"],
+    "completeness": "partial"
   },
   "legendsAndTraditions": {
-    "text": "",
+    "text": "The most widely narrated legend concerns Lord Vishnu descending to Earth in the Kali Yuga and taking up residence at Tirumala to be accessible to all devotees. According to tradition, Venkateswara took a loan from Kubera (the god of wealth) to fund his marriage to Padmavathi, and pilgrims' donations at the temple are considered contributions toward repaying that celestial debt. The legend of the anthill from which the idol is said to have emerged, and the story of Venkateswara assuming a disguise as a shepherd, are among the most beloved local traditions associated with the temple.",
     "classification": "legend",
-    "sourceIds": [],
-    "completeness": "stub"
+    "sourceIds": ["source-0"],
+    "completeness": "partial"
   },
   "architecture": {
-    "text": "",
+    "text": "The main sanctum (garbhagriha) follows the Dravidian architectural style. The gopuram (tower) over the main entrance is richly ornamented and gilded. The inner sanctum houses the principal idol of Venkateswara adorned with gold and jewels. The temple complex includes multiple mandapams (halls), a large outer courtyard, and the Swami Pushkarini sacred tank. The Vimana (dome above the sanctum) is plated with gold, a gift that reflects centuries of royal and public devotion. The Dwajasthambha (flag post) in front of the main entrance is a notable feature of Dravidian temple architecture.",
     "classification": "documented-fact",
-    "sourceIds": [],
-    "completeness": "stub"
+    "sourceIds": ["source-0"],
+    "completeness": "partial"
   },
   "ritualsAndFestivals": {
-    "text": "",
+    "text": "The temple observes a rigorous schedule of daily rituals starting before dawn (Thiruvanandal) and concluding late at night (Ekantha Seva). The Brahmotsavam — a nine-day annual festival — is the most grand, drawing massive crowds and featuring the deity being taken out on different vahanas (mounts) each day. Other key observances include Vaikunta Ekadasi (when the Vaikunta Dwaram, the celestial gate, is opened), and the monthly Sahasra Deepalankara Seva. The head-tonsuring ritual (Kalyanotsavam) is performed continuously throughout the day for pilgrims who fulfil their vows.",
     "classification": "documented-fact",
-    "sourceIds": [],
-    "completeness": "stub"
+    "sourceIds": ["source-0"],
+    "completeness": "partial"
   },
-  "thingsToExplore": [],
+  "thingsToExplore": [
+    { "name": "Swami Pushkarini Tank", "description": "The sacred tank at Tirumala where pilgrims take a ritual dip before darshan.", "type": "ritual" },
+    { "name": "Padmavathi Temple, Tiruchanur", "description": "Located about 5 km from Tirupati town, this temple dedicated to Padmavathi (Venkateswara's consort) is visited by most pilgrims.", "type": "landmark" },
+    { "name": "Sri Venkateswara National Park", "description": "The forested hills surrounding Tirumala are a declared national park, home to wildlife and scenic viewpoints.", "type": "experience" },
+    { "name": "Akasaganga and Papavinasam Waterfalls", "description": "Scenic waterfalls on the Tirumala hills regarded as sacred bathing spots.", "type": "experience" }
+  ],
   "visitorInformation": {
     "entryFee": {
-      "amount": null,
+      "amount": 0,
       "currency": "INR",
-      "notes": "",
-      "sourceId": null,
-      "verificationStatus": "unverified"
+      "notes": "Free darshan (Sarva Darshan) is available but requires waiting in queue, sometimes for several hours. Paid Special Darshan tickets are available through the official TTD website. Seva (ritual participation) tickets carry specific fees.",
+      "sourceId": "source-0",
+      "verificationStatus": "partially_verified"
     },
     "openingHours": {
-      "summary": "",
-      "sourceId": null,
+      "summary": "The temple is open for darshan daily, typically from early morning (around 3 AM for Suprabhatam) through late night. Queue timings and special darshan slots vary; always check the official TTD website before visiting.",
+      "sourceId": "source-0",
       "verificationStatus": "unverified"
     },
-    "dressCode": "",
-    "photographyPolicy": "",
-    "accessibilityNotes": "",
-    "bestArrivalTime": ""
+    "dressCode": "Dhoti or pyjama with shirt for men; saree, salwar kameez, or half-saree for women. Jeans, shorts, sleeveless tops, and non-traditional wear are not permitted inside the sanctum.",
+    "photographyPolicy": "Photography and mobile phones are not permitted inside the main sanctum. Cameras and recording devices must be deposited at the designated counters before entering.",
+    "accessibilityNotes": "TTD provides special darshan queues for senior citizens, differently-abled pilgrims, and those with serious illness. Confirm current arrangements at the queue management counters.",
+    "bestArrivalTime": "Weekdays see shorter queues than weekends. Avoid Brahmotsavam and major festival periods unless willing to wait many hours. Booking a Special Darshan ticket in advance significantly reduces waiting time."
   },
-  "bestTimeToVisit": "",
+  "bestTimeToVisit": "September to February for pleasant hill weather. Avoid peak summer (April–June). Brahmotsavam (September/October) is spectacular but extremely crowded.",
   "howToReach": {
-    "nearestAirport": {
-      "name": "",
-      "distanceKm": null
-    },
-    "nearestRailway": {
-      "name": "",
-      "distanceKm": null
-    },
-    "roadAccess": "",
-    "localTransport": ""
+    "nearestAirport": { "name": "Tirupati Airport (TIR)", "distanceKm": 14 },
+    "nearestRailway": { "name": "Tirupati Railway Station", "distanceKm": 1 },
+    "roadAccess": "Tirupati is well connected to Chennai (140 km), Bengaluru (250 km), and Hyderabad (570 km) by road. TTD operates free bus services from Tirupati bus stand to Tirumala.",
+    "localTransport": "TTD buses run frequently between Tirupati and Tirumala. Private taxis and shared cabs are also available. Walking the traditional Alipiri footpath (approx. 11 km) is a popular act of devotion."
   },
-  "nearbyPlaces": [],
+  "nearbyPlaces": [
+    { "id": "srisailam", "name": "Mallikarjuna (Srisailam)", "distanceKm": 310, "notes": "Another Jyotirlinga, accessible by road via Kurnool." }
+  ],
   "gallery": [],
   "sources": [
     {
       "id": "source-0",
-      "title": "Tirumala Tirupati Devasthanams (TTD)",
+      "title": "Tirumala Tirupati Devasthanams Official Portal",
       "publisher": "Tirumala Tirupati Devasthanams (TTD)",
-      "url": "https://tirumala.org/Darshan.aspx",
-      "sourceType": "government-tourism",
+      "url": "https://tirumala.org/",
+      "sourceType": "official-temple",
       "accessedDate": "2026-10-30",
-      "supportsFields": [],
-      "verificationStatus": "verified"
-    },
-    {
-      "id": "source-1",
-      "title": "TTD online services portal linked from TTD's official website",
-      "publisher": "TTD online services portal linked from TTD's official website",
-      "url": "https://services.tirupatibalaji.ap.gov.in/",
-      "sourceType": "government-tourism",
-      "accessedDate": "2026-10-30",
-      "supportsFields": [],
+      "supportsFields": ["overview", "historicalBackground", "religiousSignificance", "ritualsAndFestivals", "visitorInformation"],
       "verificationStatus": "verified"
     }
   ],
   "verificationStatus": "draft",
   "lastVerified": "2026-10-30",
-  "contentVersion": 1
+  "contentVersion": 2
 }
